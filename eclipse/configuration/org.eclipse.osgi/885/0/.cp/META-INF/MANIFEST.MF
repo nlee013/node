@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.nodeclipse.bundle.express
+Archiver-Version: Plexus Archiver
+Built-By: Paul_Verest
+Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime
+Bundle-ManifestVersion: 2
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: org.nodeclipse.bundle.express
+Bundle-Name: Nodeclipse-Express
+Bundle-Version: 3.2.5
+Bundle-Activator: org.nodeclipse.bundle.express.Activator
+Created-By: Apache Maven 3.3.3
+Build-Jdk: 1.8.0_45
+

@@ -1,0 +1,88 @@
+{
+  "!define": {
+    "response": {
+      "send": {"!type": "fn(body: String) -> response"},
+      "get": {"!type": "fn(field: String) -> String"},
+      "location": {"!type": "fn(url: String) -> response"},
+      "status": {"!type": "fn(code: Number) -> response"},
+      "set": {"!type": "fn(field: Object, val: String) -> response"},
+      "links": {"!type": "fn(links: Object) -> response"},
+      "download": {"!type": "fn(path: String, filename: String, fn: fn())"},
+      "contentType": {"!type": "fn(type: String)"},
+      "format": {"!type": "fn(obj: Object) -> response"},
+      "attachment": {"!type": "fn(filename: String) -> response"},
+      "type": {"!type": "fn(type: String)"},
+      "vary": {"!type": "fn(field: Object) -> response"},
+      "header": {"!type": "fn(field: Object, val: String) -> response"},
+      "render": {"!type": "fn(view: String, options: Object, fn: fn())"},
+      "cookie": {"!type": "fn(name: String, val: Object, options: Object) -> response"},
+      "sendfile": {"!type": "fn(path: String, options: Object, fn: fn())"},
+      "json": {"!type": "fn(obj: Object) -> response"},
+      "jsonp": {"!type": "fn(obj: Object) -> response"},
+      "redirect": {"!type": "fn(url: String)"},
+      "clearCookie": {"!type": "fn(name: String, options: Object) -> response"},
+      "!proto": "Object"
+    },
+    "application": {
+      "enabled": {"!type": "fn(setting: String) -> Boolean"},
+      "engine": {"!type": "fn(ext: String, fn: fn()) -> Object"},
+      "param": {"!type": "fn(name: String, fn: fn()) -> Object"},
+      "set": {"!type": "fn(setting: String, val: String) -> Object"},
+      "enable": {"!type": "fn(setting: String) -> Object"},
+      "init": {"!type": "fn()"},
+      "use": {"!type": "fn(route: String, fn: fn()) -> Object"},
+      "defaultConfiguration": {"!type": "fn()"},
+      "render": {"!type": "fn(name: String, options: Object, fn: fn())"},
+      "path": {"!type": "fn() -> String"},
+      "disable": {"!type": "fn(setting: String) -> Object"},
+      "listen": {"!type": "fn()"},
+      "configure": {"!type": "fn(env: String, fn: fn()) -> Object"},
+      "all": {"!type": "fn(path: String) -> Object"},
+      "disabled": {"!type": "fn(setting: String) -> Boolean"},
+      "!proto": "Object"
+    },
+    "middleware": {
+      "init": {"!type": "fn(app: fn())"},
+      "!proto": "Object"
+    },
+    "request": {
+      "acceptsLanguage": {"!type": "fn(lang: String) -> Boolean"},
+      "acceptsCharset": {"!type": "fn(charset: String) -> Boolean"},
+      "acceptsEncoding": {"!type": "fn(encoding: String) -> Boolean"},
+      "is": {"!type": "fn(type: String) -> Boolean"},
+      "get": {"!type": "fn(name: String) -> Object"},
+      "range": {"!type": "fn(size: Number)"},
+      "param": {"!type": "fn(name: String, defaultValue: Object) -> String"},
+      "accepts": {"!type": "fn(type: Object)"},
+      "header": {"!type": "fn(name: String) -> Object"},
+      "!proto": "Object"
+    },
+    "express": {
+      "response": "response",
+      "application": "application",
+      "!type": "fn() -> application",
+      "request": "request",
+      "Router": "Router",
+      "Route": "Route",
+      "!proto": "Object",
+      "createServer": {"!type": "fn() -> application"}
+    },
+    "Router": {
+      "!type": "fn(options: Object)",
+      "prototype": {
+        "matchRequest": {"!type": "fn(req: IncomingMessage, i: Number, head: String) -> Route"},
+        "param": {"!type": "fn(name: String, fn: fn()) -> Object"},
+        "route": {"!type": "fn(method: String, path: String, callbacks: fn()) -> Router"},
+        "match": {"!type": "fn(method: String, url: String, i: Number, head: String) -> Route"},
+        "all": {"!type": "fn(path: String) -> Router"}
+      },
+      "!proto": "Object"
+    },
+    "Route": {
+      "!type": "fn(method: String, path: String, callbacks: [fn()], options: Object)",
+      "prototype": {"match": {"!type": "fn(path: String) -> Boolean"}},
+      "!proto": "Object"
+    }
+  },
+  "!name": "express"
+}

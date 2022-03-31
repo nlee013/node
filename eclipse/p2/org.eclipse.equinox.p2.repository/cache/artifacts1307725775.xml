@@ -1,0 +1,306 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository version='1.1.0'?>
+<repository name='' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1.0.0'>
+  <properties size='3'>
+    <property name='p2.timestamp' value='1571606107503'/>
+    <property name='p2.compressed' value='true'/>
+    <property name='publishPackFilesAsSiblings' value='true'/>
+  </properties>
+  <mappings size='5'>
+    <rule filter='(&amp; (classifier=osgi.bundle) (format=packed))' output='${repoUrl}/plugins/${id}_${version}.jar.pack.gz'/>
+    <rule filter='(&amp; (classifier=osgi.bundle))' output='${repoUrl}/plugins/${id}_${version}.jar'/>
+    <rule filter='(&amp; (classifier=binary))' output='${repoUrl}/binary/${id}_${version}'/>
+    <rule filter='(&amp; (classifier=org.eclipse.update.feature) (format=packed))' output='${repoUrl}/features/${id}_${version}.jar.pack.gz'/>
+    <rule filter='(&amp; (classifier=org.eclipse.update.feature))' output='${repoUrl}/features/${id}_${version}.jar'/>
+  </mappings>
+  <artifacts size='32'>
+    <artifact classifier='org.eclipse.update.feature' id='mirur.feature' version='2.1.0.201910202111'>
+      <properties size='7'>
+        <property name='artifact.size' value='6488'/>
+        <property name='download.size' value='6488'/>
+        <property name='maven-groupId' value='mirur'/>
+        <property name='maven-artifactId' value='mirur.feature'/>
+        <property name='maven-version' value='2.1.0-SNAPSHOT'/>
+        <property name='download.contentType' value='application/zip'/>
+        <property name='download.md5' value='5ac50ece16f788690c64b0257f63927d'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='mirur.mirur-ui' version='1.3.0.201709041620'>
+      <properties size='5'>
+        <property name='artifact.size' value='8005339'/>
+        <property name='download.size' value='8005339'/>
+        <property name='maven-groupId' value='mirur'/>
+        <property name='maven-artifactId' value='mirur.mirur-ui'/>
+        <property name='maven-version' value='1.3.0-SNAPSHOT'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='mirur.jdk-agent' version='1.0.1.201509210048'>
+      <properties size='5'>
+        <property name='artifact.size' value='10267'/>
+        <property name='download.size' value='10267'/>
+        <property name='maven-groupId' value='mirur'/>
+        <property name='maven-artifactId' value='mirur.jdk-agent'/>
+        <property name='maven-version' value='1.0.1-SNAPSHOT'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='mirur.mirur-ui' version='1.1.1.201512011600'>
+      <properties size='5'>
+        <property name='artifact.size' value='8177027'/>
+        <property name='download.size' value='8177027'/>
+        <property name='maven-groupId' value='mirur'/>
+        <property name='maven-artifactId' value='mirur.mirur-ui'/>
+        <property name='maven-version' value='1.1.1-SNAPSHOT'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='mirur.jogl-linux64' version='0.6.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='49152'/>
+        <property name='download.size' value='205751'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='mirur.jdk-agent' version='1.1.0.201511291932'>
+      <properties size='5'>
+        <property name='artifact.size' value='10267'/>
+        <property name='download.size' value='10267'/>
+        <property name='maven-groupId' value='mirur'/>
+        <property name='maven-artifactId' value='mirur.jdk-agent'/>
+        <property name='maven-version' value='1.1.0-SNAPSHOT'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='mirur.jdk-agent' version='1.3.0.201709041620'>
+      <properties size='5'>
+        <property name='artifact.size' value='10639'/>
+        <property name='download.size' value='10639'/>
+        <property name='maven-groupId' value='mirur'/>
+        <property name='maven-artifactId' value='mirur.jdk-agent'/>
+        <property name='maven-version' value='1.3.0-SNAPSHOT'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='mirur.jdk-agent' version='1.1.1.201512011600'>
+      <properties size='5'>
+        <property name='artifact.size' value='10275'/>
+        <property name='download.size' value='10275'/>
+        <property name='maven-groupId' value='mirur'/>
+        <property name='maven-artifactId' value='mirur.jdk-agent'/>
+        <property name='maven-version' value='1.1.1-SNAPSHOT'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='mirur.mirur-ui' version='1.0.1.201509210048'>
+      <properties size='5'>
+        <property name='artifact.size' value='10828965'/>
+        <property name='download.size' value='10828965'/>
+        <property name='maven-groupId' value='mirur'/>
+        <property name='maven-artifactId' value='mirur.mirur-ui'/>
+        <property name='maven-version' value='1.0.1-SNAPSHOT'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='mirur.jdk-agent' version='1.0.0.201509190139'>
+      <properties size='5'>
+        <property name='artifact.size' value='10260'/>
+        <property name='download.size' value='10260'/>
+        <property name='maven-groupId' value='mirur'/>
+        <property name='maven-artifactId' value='mirur.jdk-agent'/>
+        <property name='maven-version' value='1.0.0.qualifier'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='mirur.jogl-win64' version='0.6.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='49152'/>
+        <property name='download.size' value='224551'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='mirur.jdk-agent' version='1.2.0.201610041131'>
+      <properties size='5'>
+        <property name='artifact.size' value='10563'/>
+        <property name='download.size' value='10563'/>
+        <property name='maven-groupId' value='mirur'/>
+        <property name='maven-artifactId' value='mirur.jdk-agent'/>
+        <property name='maven-version' value='1.2.0-SNAPSHOT'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='mirur.mirur-ui' version='2.0.0.201809301952'>
+      <properties size='6'>
+        <property name='artifact.size' value='7379536'/>
+        <property name='download.size' value='7379536'/>
+        <property name='maven-groupId' value='mirur'/>
+        <property name='maven-artifactId' value='mirur.mirur-ui'/>
+        <property name='maven-version' value='2.0.0-SNAPSHOT'/>
+        <property name='download.md5' value='ad1838bf6624a95fb4ae83741c2dbf6d'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='mirur.feature' version='2.0.0.201809301952'>
+      <properties size='7'>
+        <property name='artifact.size' value='6484'/>
+        <property name='download.size' value='6484'/>
+        <property name='maven-groupId' value='mirur'/>
+        <property name='maven-artifactId' value='mirur.feature'/>
+        <property name='maven-version' value='2.0.0-SNAPSHOT'/>
+        <property name='download.contentType' value='application/zip'/>
+        <property name='download.md5' value='7ab666c77a0ef5200b00aff4246a41b1'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='mirur.jdk-agent' version='1.0.2.201509260124'>
+      <properties size='5'>
+        <property name='artifact.size' value='10268'/>
+        <property name='download.size' value='10268'/>
+        <property name='maven-groupId' value='mirur'/>
+        <property name='maven-artifactId' value='mirur.jdk-agent'/>
+        <property name='maven-version' value='1.0.2-SNAPSHOT'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='mirur.jogl-linux32' version='0.6.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='49152'/>
+        <property name='download.size' value='204902'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='mirur.jogl-osx' version='0.6.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='49152'/>
+        <property name='download.size' value='213586'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='mirur.jogl-win32' version='0.6.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='49152'/>
+        <property name='download.size' value='194379'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='mirur.mirur-ui' version='1.2.0.201610041131'>
+      <properties size='5'>
+        <property name='artifact.size' value='7989212'/>
+        <property name='download.size' value='7989212'/>
+        <property name='maven-groupId' value='mirur'/>
+        <property name='maven-artifactId' value='mirur.mirur-ui'/>
+        <property name='maven-version' value='1.2.0-SNAPSHOT'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='mirur.feature' version='1.1.0.201511291932'>
+      <properties size='6'>
+        <property name='artifact.size' value='7548'/>
+        <property name='download.size' value='7548'/>
+        <property name='maven-groupId' value='mirur'/>
+        <property name='maven-artifactId' value='mirur.feature'/>
+        <property name='maven-version' value='1.1.0-SNAPSHOT'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='mirur.mirur-ui' version='1.0.0.201509190139'>
+      <properties size='5'>
+        <property name='artifact.size' value='11245214'/>
+        <property name='download.size' value='11245214'/>
+        <property name='maven-groupId' value='mirur'/>
+        <property name='maven-artifactId' value='mirur.mirur-ui'/>
+        <property name='maven-version' value='1.0.0.qualifier'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='mirur.jdk-agent' version='2.1.0.201910202111'>
+      <properties size='6'>
+        <property name='artifact.size' value='10630'/>
+        <property name='download.size' value='10630'/>
+        <property name='maven-groupId' value='mirur'/>
+        <property name='maven-artifactId' value='mirur.jdk-agent'/>
+        <property name='maven-version' value='2.1.0-SNAPSHOT'/>
+        <property name='download.md5' value='21d7783a1632a7aaaad52c53696f5d70'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='mirur.feature' version='1.0.1.201509210048'>
+      <properties size='6'>
+        <property name='artifact.size' value='7544'/>
+        <property name='download.size' value='7544'/>
+        <property name='maven-groupId' value='mirur'/>
+        <property name='maven-artifactId' value='mirur.feature'/>
+        <property name='maven-version' value='1.0.1-SNAPSHOT'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='mirur.feature' version='1.1.1.201512011600'>
+      <properties size='6'>
+        <property name='artifact.size' value='7557'/>
+        <property name='download.size' value='7557'/>
+        <property name='maven-groupId' value='mirur'/>
+        <property name='maven-artifactId' value='mirur.feature'/>
+        <property name='maven-version' value='1.1.1-SNAPSHOT'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='mirur.feature' version='1.2.0.201610041131'>
+      <properties size='6'>
+        <property name='artifact.size' value='7565'/>
+        <property name='download.size' value='7565'/>
+        <property name='maven-groupId' value='mirur'/>
+        <property name='maven-artifactId' value='mirur.feature'/>
+        <property name='maven-version' value='1.2.0-SNAPSHOT'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='mirur.feature' version='1.0.0.201509190139'>
+      <properties size='6'>
+        <property name='artifact.size' value='7531'/>
+        <property name='download.size' value='7531'/>
+        <property name='maven-groupId' value='mirur'/>
+        <property name='maven-artifactId' value='mirur.feature'/>
+        <property name='maven-version' value='1.0.0.qualifier'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='mirur.mirur-ui' version='1.1.0.201511291932'>
+      <properties size='5'>
+        <property name='artifact.size' value='8180648'/>
+        <property name='download.size' value='8180648'/>
+        <property name='maven-groupId' value='mirur'/>
+        <property name='maven-artifactId' value='mirur.mirur-ui'/>
+        <property name='maven-version' value='1.1.0-SNAPSHOT'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='mirur.feature' version='1.3.0.201709041620'>
+      <properties size='6'>
+        <property name='artifact.size' value='7571'/>
+        <property name='download.size' value='7571'/>
+        <property name='maven-groupId' value='mirur'/>
+        <property name='maven-artifactId' value='mirur.feature'/>
+        <property name='maven-version' value='1.3.0-SNAPSHOT'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='mirur.mirur-ui' version='2.1.0.201910202111'>
+      <properties size='6'>
+        <property name='artifact.size' value='7371829'/>
+        <property name='download.size' value='7371829'/>
+        <property name='maven-groupId' value='mirur'/>
+        <property name='maven-artifactId' value='mirur.mirur-ui'/>
+        <property name='maven-version' value='2.1.0-SNAPSHOT'/>
+        <property name='download.md5' value='b8e4b8d4e4a106f142042df67bfbbd31'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='mirur.jdk-agent' version='2.0.0.201809301952'>
+      <properties size='6'>
+        <property name='artifact.size' value='10634'/>
+        <property name='download.size' value='10634'/>
+        <property name='maven-groupId' value='mirur'/>
+        <property name='maven-artifactId' value='mirur.jdk-agent'/>
+        <property name='maven-version' value='2.0.0-SNAPSHOT'/>
+        <property name='download.md5' value='a59a2f45da3ec9be1924f733bc5e6000'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='mirur.mirur-ui' version='1.0.2.201509260124'>
+      <properties size='5'>
+        <property name='artifact.size' value='8171960'/>
+        <property name='download.size' value='8171960'/>
+        <property name='maven-groupId' value='mirur'/>
+        <property name='maven-artifactId' value='mirur.mirur-ui'/>
+        <property name='maven-version' value='1.0.2-SNAPSHOT'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='mirur.feature' version='1.0.2.201509260124'>
+      <properties size='6'>
+        <property name='artifact.size' value='7545'/>
+        <property name='download.size' value='7545'/>
+        <property name='maven-groupId' value='mirur'/>
+        <property name='maven-artifactId' value='mirur.feature'/>
+        <property name='maven-version' value='1.0.2-SNAPSHOT'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+  </artifacts>
+</repository>

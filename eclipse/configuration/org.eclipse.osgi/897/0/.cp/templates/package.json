@@ -1,0 +1,38 @@
+{
+  "name": "nodeclipse",
+  "version": "1.0",
+  "description": "nodeclipse CLI - prepare Node.js project to be imported into Eclipse (Nodeclipse); Installer - eclipse plugin CLI installer",
+  "main": "copier.js",
+  "scripts": {
+    "test": "test"
+  },
+  "bin": {
+    "nodeclipse": "./bin/nodeclipse.js",
+    "nci": "./bin/nci.js",
+    "epm": "./bin/epm.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nodeclipse/nodeclipse-1.git"
+  },
+  "keywords": [
+    "eclipse",
+    "ide",
+    "enide",
+    "nodeclipse",
+    "import",
+    "node.js",
+    "debug",
+    "template",
+    "installer",
+    "p2",
+    "director"
+  ],
+  "author": "Paul Verest",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "optimist": "~0.6.1",
+    "shelljs": "~0.2.6"
+  }
+}

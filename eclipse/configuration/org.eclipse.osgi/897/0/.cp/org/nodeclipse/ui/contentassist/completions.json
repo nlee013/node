@@ -1,0 +1,1078 @@
+{
+	"completions": [
+		{
+			"trigger": "ArrayBuffer();"
+		},
+		{
+			"trigger": "Int8Array();"
+		},
+		{
+			"trigger": "Uint8Array();"
+		},
+		{
+			"trigger": "Int16Array();"
+		},
+		{
+			"trigger": "Uint16Array();"
+		},
+		{
+			"trigger": "Int32Array();"
+		},
+		{
+			"trigger": "Uint32Array();"
+		},
+		{
+			"trigger": "Float32Array();"
+		},
+		{
+			"trigger": "Float64Array();"
+		},
+		{
+			"trigger": "DataView();"
+		},
+		{
+			"trigger": "Buffer(subject, encoding, offset);"
+		},
+		{
+			"trigger": "setTimeout();"
+		},
+		{
+			"trigger": "setInterval();"
+		},
+		{
+			"trigger": "clearTimeout();"
+		},
+		{
+			"trigger": "clearInterval();"
+		},
+		{
+			"trigger": "process.EventEmitter();"
+		},
+		{
+			"trigger": "process.assert();"
+		},
+		{
+			"trigger": "process._tickCallback();"
+		},
+		{
+			"trigger": "process.nextTick(callback);"
+		},
+		{
+			"trigger": "process.openStdin();"
+		},
+		{
+			"trigger": "process.exit(code);"
+		},
+		{
+			"trigger": "process.kill(pid, sig);"
+		},
+		{
+			"trigger": "process.addListener(type, listener);"
+		},
+		{
+			"trigger": "process._needTickCallback();"
+		},
+		{
+			"trigger": "process.on(type, listener);"
+		},
+		{
+			"trigger": "process.reallyExit();"
+		},
+		{
+			"trigger": "process.removeListener(type, listener);"
+		},
+		{
+			"trigger": "process.chdir();"
+		},
+		{
+			"trigger": "process.debug();"
+		},
+		{
+			"trigger": "process.cwd();"
+		},
+		{
+			"trigger": "process.error();"
+		},
+		{
+			"trigger": "process.watchFile();"
+		},
+		{
+			"trigger": "process.umask();"
+		},
+		{
+			"trigger": "process._kill();"
+		},
+		{
+			"trigger": "process.unwatchFile();"
+		},
+		{
+			"trigger": "process._debugProcess();"
+		},
+		{
+			"trigger": "process.mixin();"
+		},
+		{
+			"trigger": "process.dlopen();"
+		},
+		{
+			"trigger": "process.createChildProcess();"
+		},
+		{
+			"trigger": "process.inherits();"
+		},
+		{
+			"trigger": "process.uptime();"
+		},
+		{
+			"trigger": "process._byteLength();"
+		},
+		{
+			"trigger": "process.memoryUsage();"
+		},
+		{
+			"trigger": "process.uvCounters();"
+		},
+		{
+			"trigger": "process.binding();"
+		},
+		{
+			"trigger": "process.setMaxListeners(n);"
+		},
+		{
+			"trigger": "process.emit();"
+		},
+		{
+			"trigger": "process.once(type, listener);"
+		},
+		{
+			"trigger": "process.removeAllListeners(type);"
+		},
+		{
+			"trigger": "process.listeners(type);"
+		},
+		{
+			"trigger": "require.resolve(request);"
+		},
+		{
+			"trigger": "require.registerExtension();"
+		},
+		{
+			"trigger": "_debugger.start(argv, stdin, stdout);"
+		},
+		{
+			"trigger": "_debugger.Protocol();"
+		},
+		{
+			"trigger": "_debugger.Client();"
+		},
+		{
+			"trigger": "_linklist.init(list);"
+		},
+		{
+			"trigger": "_linklist.peek(list);"
+		},
+		{
+			"trigger": "_linklist.shift(list);"
+		},
+		{
+			"trigger": "_linklist.remove(item);"
+		},
+		{
+			"trigger": "_linklist.append(list, item);"
+		},
+		{
+			"trigger": "_linklist.isEmpty(list);"
+		},
+		{
+			"trigger": "assert.AssertionError;"
+		},
+		{
+			"trigger": "assert.fail(actual, expected, message, operator, stackStartFunction);"
+		},
+		{
+			"trigger": "assert.ok(value, message);"
+		},
+		{
+			"trigger": "assert.equal(actual, expected, message);"
+		},
+		{
+			"trigger": "assert.notEqual(actual, expected, message);"
+		},
+		{
+			"trigger": "assert.deepEqual(actual, expected, message);"
+		},
+		{
+			"trigger": "assert.notDeepEqual(actual, expected, message);"
+		},
+		{
+			"trigger": "assert.strictEqual(actual, expected, message);"
+		},
+		{
+			"trigger": "assert.notStrictEqual(actual, expected, message);"
+		},
+		{
+			"trigger": "assert.throws(block, /*optional*/error, /*optional*/message);"
+		},
+		{
+			"trigger": "assert.doesNotThrow(block, /*optional*/error, /*optional*/message);"
+		},
+		{
+			"trigger": "assert.ifError(err);"
+		},
+		{
+			"trigger": "buffer.SlowBuffer();"
+		},
+		{
+			"trigger": "buffer.Buffer(subject, encoding, offset);"
+		},
+		{
+			"trigger": "buffer_ieee754.readIEEE754(buffer, offset, isBE, mLen, nBytes);"
+		},
+		{
+			"trigger": "buffer_ieee754.writeIEEE754(buffer, value, offset, isBE, mLen, nBytes);"
+		},
+		{
+			"trigger": "child_process.fork(modulePath, args, options);"
+		},
+		{
+			"trigger": "child_process._forkChild();"
+		},
+		{
+			"trigger": "child_process.exec(command /*, options, callback */);"
+		},
+		{
+			"trigger": "child_process.execFile(file /* args, options, callback */);"
+		},
+		{
+			"trigger": "child_process.spawn(file, args, options);"
+		},
+		{
+			"trigger": "cluster.fork();"
+		},
+		{
+			"trigger": "cluster._startWorker();"
+		},
+		{
+			"trigger": "cluster._getServer(address, port, addressType, cb);"
+		},
+		{
+			"trigger": "cluster.setMaxListeners(n);"
+		},
+		{
+			"trigger": "cluster.emit();"
+		},
+		{
+			"trigger": "cluster.addListener(type, listener);"
+		},
+		{
+			"trigger": "cluster.on(type, listener);"
+		},
+		{
+			"trigger": "cluster.once(type, listener);"
+		},
+		{
+			"trigger": "cluster.removeListener(type, listener);"
+		},
+		{
+			"trigger": "cluster.removeAllListeners(type);"
+		},
+		{
+			"trigger": "cluster.listeners(type);"
+		},
+		{
+			"trigger": "console.log();"
+		},
+		{
+			"trigger": "console.info();"
+		},
+		{
+			"trigger": "console.warn();"
+		},
+		{
+			"trigger": "console.error();"
+		},
+		{
+			"trigger": "console.dir(object);"
+		},
+		{
+			"trigger": "console.time(label);"
+		},
+		{
+			"trigger": "console.timeEnd(label);"
+		},
+		{
+			"trigger": "console.trace(label);"
+		},
+		{
+			"trigger": "console.assert(expression);"
+		},
+		{
+			"trigger": "crypto.Credentials(secureProtocol, flags, context);"
+		},
+		{
+			"trigger": "crypto.createCredentials(options, context);"
+		},
+		{
+			"trigger": "crypto.Hash();"
+		},
+		{
+			"trigger": "crypto.createHash(hash);"
+		},
+		{
+			"trigger": "crypto.Hmac();"
+		},
+		{
+			"trigger": "crypto.createHmac(hmac, key);"
+		},
+		{
+			"trigger": "crypto.Cipher();"
+		},
+		{
+			"trigger": "crypto.createCipher(cipher, password);"
+		},
+		{
+			"trigger": "crypto.createCipheriv(cipher, key, iv);"
+		},
+		{
+			"trigger": "crypto.Decipher();"
+		},
+		{
+			"trigger": "crypto.createDecipher(cipher, password);"
+		},
+		{
+			"trigger": "crypto.createDecipheriv(cipher, key, iv);"
+		},
+		{
+			"trigger": "crypto.Sign();"
+		},
+		{
+			"trigger": "crypto.createSign(algorithm);"
+		},
+		{
+			"trigger": "crypto.Verify();"
+		},
+		{
+			"trigger": "crypto.createVerify(algorithm);"
+		},
+		{
+			"trigger": "crypto.DiffieHellman();"
+		},
+		{
+			"trigger": "crypto.createDiffieHellman(size_or_key, enc);"
+		},
+		{
+			"trigger": "crypto.pbkdf2();"
+		},
+		{
+			"trigger": "crypto.randomBytes();"
+		},
+		{
+			"trigger": "crypto.pseudoRandomBytes();"
+		},
+		{
+			"trigger": "crypto.rng();"
+		},
+		{
+			"trigger": "crypto.prng();"
+		},
+		{
+			"trigger": "dgram.Socket(type, listener);"
+		},
+		{
+			"trigger": "dgram.createSocket(type, listener);"
+		},
+		{
+			"trigger": "dns.lookup(domain, family, callback);"
+		},
+		{
+			"trigger": "dns.resolve4(name, callback);"
+		},
+		{
+			"trigger": "dns.resolve6(name, callback);"
+		},
+		{
+			"trigger": "dns.resolveCname(name, callback);"
+		},
+		{
+			"trigger": "dns.resolveMx(name, callback);"
+		},
+		{
+			"trigger": "dns.resolveNs(name, callback);"
+		},
+		{
+			"trigger": "dns.resolveTxt(name, callback);"
+		},
+		{
+			"trigger": "dns.resolveSrv(name, callback);"
+		},
+		{
+			"trigger": "dns.reverse(name, callback);"
+		},
+		{
+			"trigger": "dns.resolve(domain, type_, callback_);"
+		},
+		{
+			"trigger": "events.EventEmitter();"
+		},
+		{
+			"trigger": "freelist.FreeList(name, max, constructor);"
+		},
+		{
+			"trigger": "fs.Stats();"
+		},
+		{
+			"trigger": "fs.readFile(path, encoding_);"
+		},
+		{
+			"trigger": "fs.readFileSync(path, encoding);"
+		},
+		{
+			"trigger": "fs.close(fd, callback);"
+		},
+		{
+			"trigger": "fs.closeSync(fd);"
+		},
+		{
+			"trigger": "fs.open(path, flags, mode, callback);"
+		},
+		{
+			"trigger": "fs.openSync(path, flags, mode);"
+		},
+		{
+			"trigger": "fs.read(fd, buffer, offset, length, position, callback);"
+		},
+		{
+			"trigger": "fs.readSync(fd, buffer, offset, length, position);"
+		},
+		{
+			"trigger": "fs.write(fd, buffer, offset, length, position, callback);"
+		},
+		{
+			"trigger": "fs.writeSync(fd, buffer, offset, length, position);"
+		},
+		{
+			"trigger": "fs.rename(oldPath, newPath, callback);"
+		},
+		{
+			"trigger": "fs.renameSync(oldPath, newPath);"
+		},
+		{
+			"trigger": "fs.truncate(fd, len, callback);"
+		},
+		{
+			"trigger": "fs.truncateSync(fd, len);"
+		},
+		{
+			"trigger": "fs.rmdir(path, callback);"
+		},
+		{
+			"trigger": "fs.rmdirSync(path);"
+		},
+		{
+			"trigger": "fs.fdatasync(fd, callback);"
+		},
+		{
+			"trigger": "fs.fdatasyncSync(fd);"
+		},
+		{
+			"trigger": "fs.fsync(fd, callback);"
+		},
+		{
+			"trigger": "fs.fsyncSync(fd);"
+		},
+		{
+			"trigger": "fs.mkdir(path, mode, callback);"
+		},
+		{
+			"trigger": "fs.mkdirSync(path, mode);"
+		},
+		{
+			"trigger": "fs.sendfile(outFd, inFd, inOffset, length, callback);"
+		},
+		{
+			"trigger": "fs.sendfileSync(outFd, inFd, inOffset, length);"
+		},
+		{
+			"trigger": "fs.readdir(path, callback);"
+		},
+		{
+			"trigger": "fs.readdirSync(path);"
+		},
+		{
+			"trigger": "fs.fstat(fd, callback);"
+		},
+		{
+			"trigger": "fs.lstat(path, callback);"
+		},
+		{
+			"trigger": "fs.stat(path, callback);"
+		},
+		{
+			"trigger": "fs.fstatSync(fd);"
+		},
+		{
+			"trigger": "fs.lstatSync(path);"
+		},
+		{
+			"trigger": "fs.statSync(path);"
+		},
+		{
+			"trigger": "fs.readlink(path, callback);"
+		},
+		{
+			"trigger": "fs.readlinkSync(path);"
+		},
+		{
+			"trigger": "fs.symlink(destination, path, mode_, callback);"
+		},
+		{
+			"trigger": "fs.symlinkSync(destination, path, mode);"
+		},
+		{
+			"trigger": "fs.link(srcpath, dstpath, callback);"
+		},
+		{
+			"trigger": "fs.linkSync(srcpath, dstpath);"
+		},
+		{
+			"trigger": "fs.unlink(path, callback);"
+		},
+		{
+			"trigger": "fs.unlinkSync(path);"
+		},
+		{
+			"trigger": "fs.fchmod(fd, mode, callback);"
+		},
+		{
+			"trigger": "fs.fchmodSync(fd, mode);"
+		},
+		{
+			"trigger": "fs.chmod(path, mode, callback);"
+		},
+		{
+			"trigger": "fs.chmodSync(path, mode);"
+		},
+		{
+			"trigger": "fs.fchown(fd, uid, gid, callback);"
+		},
+		{
+			"trigger": "fs.fchownSync(fd, uid, gid);"
+		},
+		{
+			"trigger": "fs.chown(path, uid, gid, callback);"
+		},
+		{
+			"trigger": "fs.chownSync(path, uid, gid);"
+		},
+		{
+			"trigger": "fs._toUnixTimestamp(time);"
+		},
+		{
+			"trigger": "fs.utimes(path, atime, mtime, callback);"
+		},
+		{
+			"trigger": "fs.utimesSync(path, atime, mtime);"
+		},
+		{
+			"trigger": "fs.futimes(fd, atime, mtime, callback);"
+		},
+		{
+			"trigger": "fs.futimesSync(fd, atime, mtime);"
+		},
+		{
+			"trigger": "fs.writeFile(path, data, encoding_, callback);"
+		},
+		{
+			"trigger": "fs.writeFileSync(path, data, encoding);"
+		},
+		{
+			"trigger": "fs.watch(filename);"
+		},
+		{
+			"trigger": "fs.watchFile(filename);"
+		},
+		{
+			"trigger": "fs.unwatchFile(filename);"
+		},
+		{
+			"trigger": "fs.realpathSync(p, cache);"
+		},
+		{
+			"trigger": "fs.realpath(p, cache, cb);"
+		},
+		{
+			"trigger": "fs.createReadStream(path, options);"
+		},
+		{
+			"trigger": "fs.ReadStream(path, options);"
+		},
+		{
+			"trigger": "fs.FileReadStream(path, options);"
+		},
+		{
+			"trigger": "fs.createWriteStream(path, options);"
+		},
+		{
+			"trigger": "fs.WriteStream(path, options);"
+		},
+		{
+			"trigger": "fs.FileWriteStream(path, options);"
+		},
+		{
+			"trigger": "fs.SyncWriteStream(fd);"
+		},
+		{
+			"trigger": "http.IncomingMessage(socket);"
+		},
+		{
+			"trigger": "http.OutgoingMessage();"
+		},
+		{
+			"trigger": "http.ServerResponse(req);"
+		},
+		{
+			"trigger": "http.Agent(options);"
+		},
+		{
+			"trigger": "http.ClientRequest(options, cb);"
+		},
+		{
+			"trigger": "http.request(options, cb);"
+		},
+		{
+			"trigger": "http.get(options, cb);"
+		},
+		{
+			"trigger": "http.Server(requestListener);"
+		},
+		{
+			"trigger": "http.createServer(requestListener);"
+		},
+		{
+			"trigger": "http._connectionListener(socket);"
+		},
+		{
+			"trigger": "http.Client(port, host);"
+		},
+		{
+			"trigger": "http.createClient(port, host);"
+		},
+		{
+			"trigger": "https.Server(opts, requestListener);"
+		},
+		{
+			"trigger": "https.createServer(opts, requestListener);"
+		},
+		{
+			"trigger": "https.Agent(options);"
+		},
+		{
+			"trigger": "https.request(options, cb);"
+		},
+		{
+			"trigger": "https.get(options, cb);"
+		},
+		{
+			"trigger": "module.wrap(script);"
+		},
+		{
+			"trigger": "module._debug();"
+		},
+		{
+			"trigger": "module._findPath(request, paths);"
+		},
+		{
+			"trigger": "module._nodeModulePaths(from);"
+		},
+		{
+			"trigger": "module._resolveLookupPaths(request, parent);"
+		},
+		{
+			"trigger": "module._load(request, parent, isMain);"
+		},
+		{
+			"trigger": "module._resolveFilename(request, parent);"
+		},
+		{
+			"trigger": "module.runMain();"
+		},
+		{
+			"trigger": "module._initPaths();"
+		},
+		{
+			"trigger": "module.requireRepl();"
+		},
+		{
+			"trigger": "module.Module(id, parent);"
+		},
+		{
+			"trigger": "net.createServer();"
+		},
+		{
+			"trigger": "net.createConnection(port /* [host], [cb] */);"
+		},
+		{
+			"trigger": "net.connect(port /* [host], [cb] */);"
+		},
+		{
+			"trigger": "net.Socket(options);"
+		},
+		{
+			"trigger": "net.Stream(options);"
+		},
+		{
+			"trigger": "net.Server(/* [ options, ] listener */);"
+		},
+		{
+			"trigger": "net._createServerHandle(address, port, addressType);"
+		},
+		{
+			"trigger": "net.isIP(input);"
+		},
+		{
+			"trigger": "net.isIPv4(input);"
+		},
+		{
+			"trigger": "net.isIPv6(input);"
+		},
+		{
+			"trigger": "os.hostname();"
+		},
+		{
+			"trigger": "os.loadavg();"
+		},
+		{
+			"trigger": "os.uptime();"
+		},
+		{
+			"trigger": "os.freemem();"
+		},
+		{
+			"trigger": "os.totalmem();"
+		},
+		{
+			"trigger": "os.cpus();"
+		},
+		{
+			"trigger": "os.type();"
+		},
+		{
+			"trigger": "os.release();"
+		},
+		{
+			"trigger": "os.networkInterfaces();"
+		},
+		{
+			"trigger": "os.arch();"
+		},
+		{
+			"trigger": "os.platform();"
+		},
+		{
+			"trigger": "os.getNetworkInterfaces();"
+		},
+		{
+			"trigger": "path.resolve();"
+		},
+		{
+			"trigger": "path.normalize(path);"
+		},
+		{
+			"trigger": "path.join();"
+		},
+		{
+			"trigger": "path.relative(from, to);"
+		},
+		{
+			"trigger": "path.dirname(path);"
+		},
+		{
+			"trigger": "path.basename(path, ext);"
+		},
+		{
+			"trigger": "path.extname(path);"
+		},
+		{
+			"trigger": "path.exists(path, callback);"
+		},
+		{
+			"trigger": "path.existsSync(path);"
+		},
+		{
+			"trigger": "punycode.decode(input, preserveCase);"
+		},
+		{
+			"trigger": "punycode.encode(input, preserveCase);"
+		},
+		{
+			"trigger": "punycode.toASCII(domain);"
+		},
+		{
+			"trigger": "punycode.toUnicode(domain);"
+		},
+		{
+			"trigger": "querystring.unescapeBuffer(s, decodeSpaces);"
+		},
+		{
+			"trigger": "querystring.unescape(s, decodeSpaces);"
+		},
+		{
+			"trigger": "querystring.escape(str);"
+		},
+		{
+			"trigger": "querystring.encode(obj, sep, eq, name);"
+		},
+		{
+			"trigger": "querystring.stringify(obj, sep, eq, name);"
+		},
+		{
+			"trigger": "querystring.decode(qs, sep, eq);"
+		},
+		{
+			"trigger": "querystring.parse(qs, sep, eq);"
+		},
+		{
+			"trigger": "readline.createInterface(input, output, completer);"
+		},
+		{
+			"trigger": "readline.Interface(input, output, completer);"
+		},
+		{
+			"trigger": "repl.writer(obj, showHidden, depth, colors);"
+		},
+		{
+			"trigger": "repl.REPLServer(prompt, stream, eval, useGlobal, ignoreUndefined);"
+		},
+		{
+			"trigger": "repl.start(prompt, source, eval, useGlobal);"
+		},
+		{
+			"trigger": "stream.super_();"
+		},
+		{
+			"trigger": "stream.Stream();"
+		},
+		{
+			"trigger": "string_decoder.StringDecoder(encoding);"
+		},
+		{
+			"trigger": "sys.print();"
+		},
+		{
+			"trigger": "sys.puts();"
+		},
+		{
+			"trigger": "sys.debug(x);"
+		},
+		{
+			"trigger": "sys.error(x);"
+		},
+		{
+			"trigger": "sys.inspect(obj, showHidden, depth, colors);"
+		},
+		{
+			"trigger": "sys.p();"
+		},
+		{
+			"trigger": "sys.log(msg);"
+		},
+		{
+			"trigger": "sys.exec();"
+		},
+		{
+			"trigger": "sys.pump(readStream, writeStream, callback);"
+		},
+		{
+			"trigger": "sys.inherits(ctor, superCtor);"
+		},
+		{
+			"trigger": "timers.unenroll(item);"
+		},
+		{
+			"trigger": "timers.enroll(item, msecs);"
+		},
+		{
+			"trigger": "timers.active(item);"
+		},
+		{
+			"trigger": "timers.setTimeout(callback, after);"
+		},
+		{
+			"trigger": "timers.clearTimeout(timer);"
+		},
+		{
+			"trigger": "timers.setInterval(callback, repeat);"
+		},
+		{
+			"trigger": "timers.clearInterval(timer);"
+		},
+		{
+			"trigger": "tls.createSecurePair(credentials, isServer, requestCert, rejectUnauthorized);"
+		},
+		{
+			"trigger": "tls.Server(/* [options], listener */);"
+		},
+		{
+			"trigger": "tls.createServer(options, listener);"
+		},
+		{
+			"trigger": "tls.connect(port /* host, options, cb */);"
+		},
+		{
+			"trigger": "tty.isatty(fd);"
+		},
+		{
+			"trigger": "tty.setRawMode(flag);"
+		},
+		{
+			"trigger": "tty.getWindowSize();"
+		},
+		{
+			"trigger": "tty.setWindowSize();"
+		},
+		{
+			"trigger": "tty.ReadStream(fd);"
+		},
+		{
+			"trigger": "tty.WriteStream(fd);"
+		},
+		{
+			"trigger": "url.parse(url, parseQueryString, slashesDenoteHost);"
+		},
+		{
+			"trigger": "url.resolve(source, relative);"
+		},
+		{
+			"trigger": "url.resolveObject(source, relative);"
+		},
+		{
+			"trigger": "url.format(obj);"
+		},
+		{
+			"trigger": "util.format(f);"
+		},
+		{
+			"trigger": "util.print();"
+		},
+		{
+			"trigger": "util.puts();"
+		},
+		{
+			"trigger": "util.debug(x);"
+		},
+		{
+			"trigger": "util.error(x);"
+		},
+		{
+			"trigger": "util.inspect(obj, showHidden, depth, colors);"
+		},
+		{
+			"trigger": "util.isArray(ar);"
+		},
+		{
+			"trigger": "util.isRegExp(re);"
+		},
+		{
+			"trigger": "util.isDate(d);"
+		},
+		{
+			"trigger": "util.isError(e);"
+		},
+		{
+			"trigger": "util.p();"
+		},
+		{
+			"trigger": "util.log(msg);"
+		},
+		{
+			"trigger": "util.exec();"
+		},
+		{
+			"trigger": "util.pump(readStream, writeStream, callback);"
+		},
+		{
+			"trigger": "util.inherits(ctor, superCtor);"
+		},
+		{
+			"trigger": "vm.Script();"
+		},
+		{
+			"trigger": "vm.createScript(code, ctx, name);"
+		},
+		{
+			"trigger": "vm.createContext();"
+		},
+		{
+			"trigger": "vm.runInContext();"
+		},
+		{
+			"trigger": "vm.runInThisContext();"
+		},
+		{
+			"trigger": "vm.runInNewContext();"
+		},
+		{
+			"trigger": "zlib.Deflate(opts);"
+		},
+		{
+			"trigger": "zlib.Inflate(opts);"
+		},
+		{
+			"trigger": "zlib.Gzip(opts);"
+		},
+		{
+			"trigger": "zlib.Gunzip(opts);"
+		},
+		{
+			"trigger": "zlib.DeflateRaw(opts);"
+		},
+		{
+			"trigger": "zlib.InflateRaw(opts);"
+		},
+		{
+			"trigger": "zlib.Unzip(opts);"
+		},
+		{
+			"trigger": "zlib.createDeflate(o);"
+		},
+		{
+			"trigger": "zlib.createInflate(o);"
+		},
+		{
+			"trigger": "zlib.createDeflateRaw(o);"
+		},
+		{
+			"trigger": "zlib.createInflateRaw(o);"
+		},
+		{
+			"trigger": "zlib.createGzip(o);"
+		},
+		{
+			"trigger": "zlib.createGunzip(o);"
+		},
+		{
+			"trigger": "zlib.createUnzip(o);"
+		},
+		{
+			"trigger": "zlib.deflate(buffer, callback);"
+		},
+		{
+			"trigger": "zlib.gzip(buffer, callback);"
+		},
+		{
+			"trigger": "zlib.deflateRaw(buffer, callback);"
+		},
+		{
+			"trigger": "zlib.unzip(buffer, callback);"
+		},
+		{
+			"trigger": "zlib.inflate(buffer, callback);"
+		},
+		{
+			"trigger": "zlib.gunzip(buffer, callback);"
+		},
+		{
+			"trigger": "zlib.inflateRaw(buffer, callback);"
+		}
+	]
+}

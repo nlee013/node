@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.eclipse.wst.html.webresources.feature"
+      label="%featureName"
+      version="1.1.0.201511091131"
+      provider-name="%featureProvider">
+
+   <description>
+      %description
+   </description>
+
+   <copyright>
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <plugin
+         id="org.eclipse.a.wst.html.webresources.core"
+         download-size="82"
+         install-size="174"
+         version="1.1.0.201511091131"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.a.wst.html.webresources.ui"
+         download-size="83"
+         install-size="168"
+         version="1.1.0.201511091131"
+         unpack="false"/>
+
+</feature>

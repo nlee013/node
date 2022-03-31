@@ -1,0 +1,5 @@
+#encoding=UTF-8
+#version=1
+com.eclipsesource.jshint.source,0.10.1.20160216-0911,plugins/com.eclipsesource.jshint.source_0.10.1.20160216-0911.jar,-1,false
+com.eclipsesource.jshint.ui.source,0.10.1.20160216-0911,plugins/com.eclipsesource.jshint.ui.source_0.10.1.20160216-0911.jar,-1,false
+org.mozilla.javascript.source,1.7.5.v201504281450,plugins/org.mozilla.javascript.source_1.7.5.v201504281450.jar,-1,false

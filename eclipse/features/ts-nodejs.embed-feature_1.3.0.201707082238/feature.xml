@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="ts-nodejs.embed-feature"
+      label="%featureName"
+      version="1.3.0.201707082238"
+      provider-name="%featureProvider">
+
+   <description>
+      %description
+   </description>
+
+   <copyright>
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <plugin
+         id="ts.eclipse.ide.server.nodejs.embed.linux.gtk.x86_64"
+         os="linux"
+         ws="gtk"
+         arch="x86_64"
+         download-size="13504"
+         install-size="13604"
+         version="1.3.0.201707082238"
+         unpack="false"/>
+
+   <plugin
+         id="ts.eclipse.ide.server.nodejs.embed.linux.gtk.x86"
+         os="linux"
+         ws="gtk"
+         arch="x86"
+         download-size="13003"
+         install-size="13100"
+         version="1.3.0.201707082238"
+         unpack="false"/>
+
+   <plugin
+         id="ts.eclipse.ide.server.nodejs.embed.macosx.cocoa.x86_64"
+         os="macosx"
+         ws="cocoa"
+         arch="x86_64"
+         download-size="11639"
+         install-size="11762"
+         version="1.3.0.201707082238"
+         unpack="false"/>
+
+   <plugin
+         id="ts.eclipse.ide.server.nodejs.embed.win32.win32.x86"
+         os="win32"
+         ws="win32"
+         arch="x86"
+         download-size="9317"
+         install-size="10770"
+         version="1.3.0.201707082238"
+         unpack="false"/>
+
+   <plugin
+         id="ts.eclipse.ide.server.nodejs.embed.win32.win32.x86_64"
+         os="win32"
+         ws="win32"
+         arch="x86_64"
+         download-size="10501"
+         install-size="11955"
+         version="1.3.0.201707082238"
+         unpack="false"/>
+
+</feature>

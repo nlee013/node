@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="org.nodeclipse.ui.wizards.category"
+            name="Node">
+      </category>
+      <wizard
+            category="org.nodeclipse.ui.wizards.category"
+            class="org.nodeclipse.ui.wizards.NodeProjectWizard"
+            finalPerspective="org.nodeclipse.ui.perspectives.NodePerspective"
+            icon="icons/node_top_right_corner_new.png"
+            id="org.nodeclipse.ui.wizards.NodeProjectWizard"
+            name="Node.js Project"
+            project="true">
+         <description>
+            Create a new Node.js project (or add .project file to an existing project and import)
+         </description>
+      </wizard>
+      <wizard
+            category="org.nodeclipse.ui.wizards.category"
+            class="org.nodeclipse.ui.wizards.ExpressProjectWizard"
+            finalPerspective="org.nodeclipse.ui.perspectives.NodePerspective"
+            icon="icons/e_16x16_top_right_corner_new.png"
+            id="org.nodeclipse.ui.wizards.ExpressProjectWizard"
+            name="Node.js Express Project"
+            project="true">
+         <description>
+            Create a new Node.js project with Express.js framework (Express should be installed before with <code>npm install -g express</code>)
+         </description>
+      </wizard>
+      <wizard
+            category="org.nodeclipse.ui.wizards.category"
+            class="org.nodeclipse.ui.wizards.NodeFileWizard"
+            finalPerspective="org.nodeclipse.ui.perspectives.NodePerspective"
+            icon="icons/node_top_right_corner_file_top_right_corner_new.png"
+            id="org.nodeclipse.ui.wizards.NodeFileWizard"
+            name="JavaScript File">
+         <description>
+            Create a new JavaScript file
+         </description>
+      </wizard>
+      <wizard
+            category="org.nodeclipse.ui.wizards.category"
+            class="org.nodeclipse.ui.wizards.CoffeeFileWizard"
+            finalPerspective="org.nodeclipse.ui.perspectives.NodePerspective"
+            icon="icons/coffee_top_right_corner_new.png"
+            id="org.nodeclipse.ui.wizards.CoffeeFileWizard"
+            name="CoffeeScript File">
+         <description>
+            Create a new CoffeeScript file
+         </description>
+      </wizard>
+      <wizard
+            category="org.nodeclipse.ui.wizards.category"
+            class="org.nodeclipse.ui.wizards.TypeScriptFileWizard"
+            finalPerspective="org.nodeclipse.ui.perspectives.NodePerspective"
+            icon="icons/typescript_16_top_right_corner_new.png"
+            id="org.nodeclipse.ui.wizards.TypeScriptFileWizard"
+            name="TypeScript File">
+         <description>
+            Create a new TypeScript file
+         </description>
+      </wizard>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.editors">
+      <!-- old TextEditor based Nodejs Editor -->
+      <editor
+            class="org.nodeclipse.ui.editors.NodeclipseNodejsEditor"
+            contributorClass="org.eclipse.ui.texteditor.BasicTextEditorActionContributor"
+            extensions="js,njs,_js,json,bowerrc,jshintrc,tern-project,bowerrc"
+            icon="icons/node.png"
+            id="org.nodeclipse.ui.editors.NodeclipseNodejsEditor"
+            name="Nodeclipse Nodejs Editor">
+      </editor>
+      <!-- Nodeclipse JSDT-based Editor -->
+      <editor
+            class="org.nodeclipse.ui.editors.NodeEditor"
+            contributorClass="org.eclipse.ui.texteditor.BasicTextEditorActionContributor"
+            default="true"
+            extensions="js,njs,_js"
+            icon="icons/node_top_right_corner_file.png"
+            id="org.nodeclipse.ui.editors.NodeEditor"
+            name="Nodeclipse JSDT-based Editor">
+      </editor>
+      <!-- Nodeclipse JSDT-based Editor: just for different icons for json,jshintrc,tern-project,bowerrc  -->
+      <editor 
+            class="org.nodeclipse.ui.editors.NodeEditor"
+            contributorClass="org.eclipse.ui.texteditor.BasicTextEditorActionContributor"
+            default="true"
+            extensions="json,bowerrc"
+            icon="icons/node_blue.png"
+            id="org.nodeclipse.ui.editors.NodeEditor.json"
+            name="Nodeclipse JSDT-based Editor">
+      </editor>
+      <editor 
+            class="org.nodeclipse.ui.editors.NodeEditor"
+            contributorClass="org.eclipse.ui.texteditor.BasicTextEditorActionContributor"
+            default="true"
+            extensions="jshintrc"
+            icon="icons/jsh_16.png"
+            id="org.nodeclipse.ui.editors.NodeEditor.jshintrc"
+            name="Nodeclipse JSDT-based Editor">
+      </editor>
+      <editor 
+            class="org.nodeclipse.ui.editors.NodeEditor"
+            contributorClass="org.eclipse.ui.texteditor.BasicTextEditorActionContributor"
+            default="true"
+            extensions="tern-project"
+            icon="icons/tern.png"
+            id="org.nodeclipse.ui.editors.NodeEditor.tern-project"
+            name="Nodeclipse JSDT-based Editor">
+      </editor>
+      <!--
+      -->
+      <editor 
+            class="org.nodeclipse.ui.editors.NodeEditor"
+            contributorClass="org.eclipse.ui.texteditor.BasicTextEditorActionContributor"
+            default="true"
+            extensions="bowerrc"
+            icon="icons/bower16.png"
+            id="org.nodeclipse.ui.editors.NodeEditor.bowerrc"
+            name="Nodeclipse JSDT-based Editor">
+      </editor>
+      <editor
+            class="org.nodeclipse.ui.editors.NodeEditor"
+            contributorClass="org.eclipse.ui.texteditor.BasicTextEditorActionContributor"
+            filenames = "bower.json"
+            icon="icons/bower16.png"
+            id="org.nodeclipse.ui.editors.NodeEditor.bower.json"
+            name="Nodeclipse JSDT-based Editor">
+      </editor>
+      <editor
+            class="org.nodeclipse.ui.editors.NodeEditor"
+            contributorClass="org.eclipse.ui.texteditor.BasicTextEditorActionContributor"
+            filenames = "package.json"
+            icon="icons/npm/npm.png"
+            id="org.nodeclipse.ui.editors.NodeEditor.package.json"
+            name="Nodeclipse JSDT-based Editor">
+      </editor>
+      <editor
+            class="org.nodeclipse.ui.editors.NodeEditor"
+            contributorClass="org.eclipse.ui.texteditor.BasicTextEditorActionContributor"
+            filenames = "www"
+            icon="icons/node_red.png"
+            id="org.nodeclipse.ui.editors.NodeEditor.www"
+            name="Nodeclipse JSDT-based Editor">
+      </editor>
+      <!-- TextEditor npm-gray icon -->
+      <editor 
+            class="org.eclipse.ui.editors.text.TextEditor"
+            contributorClass="org.eclipse.ui.texteditor.BasicTextEditorActionContributor"
+            default="true"
+            extensions="npmignore"
+            icon="icons/npm/npm_gray.png"
+            id="org.nodeclipse.ui.editors.NodeEditor.npmignore"
+            name="TextEditor for .npmignore">
+      </editor>
+    </extension>
+    
+	<extension point="org.eclipse.wst.jsdt.ui.javaCompletionProposalComputer"
+	   id="nodeclispe_textual_proposals"
+	   name="Nodeclipse Text Proposals">
+	   <proposalCategory icon="icons/npm/npm.gif"/>
+	 </extension>
+	 <extension point="org.eclipse.wst.jsdt.ui.javaCompletionProposalComputer"
+	   id="NodeclipseProposals"
+	   name="Nodeclipse Proposals">
+	   <javaCompletionProposalComputer
+	      class="org.nodeclipse.ui.contentassist.JSDTProposalComputer"
+	      categoryId="org.eclipse.ui.texteditor.textual_proposals"
+	      activate="true">
+	   </javaCompletionProposalComputer>
+	   <proposalCategory icon="icons/node.png"/>
+	 </extension>
+     
+     
+	<extension point="org.eclipse.debug.ui.toggleBreakpointsTargetFactories">
+	    <toggleTargetFactory
+	            id="org.chromium.debug.ui.ChromiumToggleBreakpointTargetFactory"
+	            class="org.chromium.debug.ui.ChromiumToggleBreakpointTargetFactory">
+	        <enablement>
+	          <or>
+	             <!-- Applicable for any text editor (java code additionally checks extension) -->
+	             <instanceof value="org.eclipse.ui.texteditor.ITextEditor"/>
+	             <!-- or when our debug element is in context -->
+	             <with variable="debugContext">
+	                <iterate>
+	                  <test property="org.eclipse.debug.ui.getModelIdentifier"
+	                        value="org.chromium.debug"/>
+	                </iterate>
+	             </with>
+	          </or>
+	        </enablement>
+	    </toggleTargetFactory>
+	 </extension>
+	<extension point="org.eclipse.ui.editorActions">
+	    <editorContribution
+	        targetID="org.nodeclipse.ui.editors.NodeEditor"
+	        id="org.chromium.debug.ui.editors.JsEditor.editorActions">
+	      <action
+	          label="Not Used"
+	          class="org.eclipse.debug.ui.actions.RulerToggleBreakpointActionDelegate"
+	          style="push"
+	          actionID="RulerDoubleClick"
+	          id="org.chromium.debug.ui.editor.ruler.doubleClickBreakpointAction"/>
+	      <action
+	          toolbarPath="evaluationGroup"
+	          id="org.chromium.debug.ui.SnippetInspect"
+	          definitionId="org.chromium.debug.ui.commands.Inspect"
+	          class="org.chromium.debug.ui.actions.JsInspectSnippetAction"
+	          enablesFor="+"
+	          label="Inspect"
+	          tooltip="Inspect Result of Evaluating Selected Text using ChromeDevTools (available during debugging)">
+	        <enablement>
+	            <objectClass
+	                name="org.eclipse.jface.text.ITextSelection"/>
+	        </enablement>
+	      </action>
+	    </editorContribution>
+	  </extension>
+
+
+   <extension
+         point="org.eclipse.ui.ide.projectNatureImages">
+      <image
+            icon="icons/node-nature.png"
+            id="org.nodeclipse.ui.NodeNature.Image"
+            natureId="org.nodeclipse.ui.NodeNature">
+      </image>
+   </extension>
+   <extension
+         id="org.nodeclipse.ui.NodeNature"
+         name="Node Project Nature"
+         point="org.eclipse.core.resources.natures">
+      <runtime>
+         <run
+               class="org.nodeclipse.ui.nature.NodeNature">
+         </run>
+      </runtime>
+   </extension>
+   <extension
+         id="org.nodeclipse.ui.CoffeeNature"
+         name="Coffee Project Nature"
+         point="org.eclipse.core.resources.natures">
+      <runtime>
+         <run
+               class="org.nodeclipse.ui.nature.CoffeeNature">
+         </run>
+      </runtime>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="org.nodeclipse.ui.perspectives.NodePerspective"
+            icon="icons/node.png"
+            id="org.nodeclipse.ui.perspectives.NodePerspective"
+            name="Node">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="org.eclipse.ui.resourcePerspective">
+         	<perspectiveShortcut
+               id="org.nodeclipse.ui.perspectives.NodePerspective">
+         	</perspectiveShortcut>
+      </perspectiveExtension>
+      <perspectiveExtension
+            targetID="org.eclipse.debug.ui.DebugPerspective">
+         <perspectiveShortcut
+               id="org.nodeclipse.ui.perspectives.NodePerspective">
+         </perspectiveShortcut>
+      </perspectiveExtension>
+   </extension>
+   <extension
+         point="org.eclipse.ui.navigator.navigatorContent">
+      <commonWizard
+            menuGroupId="org.nodeclipse.ui.wizards.category"
+            type="new"
+            wizardId="org.nodeclipse.ui.wizards.ExpressProjectWizard">
+         <enablement></enablement>
+      </commonWizard>
+      <commonWizard
+            menuGroupId="org.nodeclipse.ui.wizards.category"
+            type="new"
+            wizardId="org.nodeclipse.ui.wizards.NodeProjectWizard">
+         <enablement></enablement>
+      </commonWizard>
+      <commonWizard
+            menuGroupId="org.nodeclipse.ui.wizards.category"
+            type="new"
+            wizardId="org.nodeclipse.ui.wizards.NodeFileWizard">
+         <enablement></enablement>
+      </commonWizard>
+      <commonWizard
+            menuGroupId="org.nodeclipse.ui.wizards.category"
+            type="new"
+            wizardId="org.nodeclipse.ui.wizards.CoffeeFileWizard">
+         <enablement></enablement>
+      </commonWizard>
+      <commonWizard
+            menuGroupId="org.nodeclipse.ui.wizards.category"
+            type="new"
+            wizardId="org.nodeclipse.ui.wizards.TypeScriptFileWizard">
+         <enablement></enablement>
+      </commonWizard>
+   </extension>
+   <extension
+         point="org.eclipse.debug.core.launchConfigurationTypes">
+      <launchConfigurationType
+            delegate="org.nodeclipse.ui.npm.LaunchConfigurationDelegate"
+            id="org.nodeclipse.ui.npm.LaunchConfigurationType"
+            modes="run, debug"
+            name="NPM">
+      </launchConfigurationType>
+   </extension>
+   <extension
+         point= "org.eclipse.debug.ui.launchConfigurationTypeImages" >
+      <launchConfigurationTypeImage
+            configTypeID= "org.nodeclipse.ui.npm.LaunchConfigurationType"
+            icon= "icons/npm/npm_bottom_right_corner_run_half_size.png"
+            id= "org.nodeclipse.ui.npm.LaunchConfigurationTypeImage" >
+      </launchConfigurationTypeImage>
+   </extension>
+   <extension
+         point= "org.eclipse.debug.ui.launchShortcuts" >
+      <shortcut
+            class= "org.nodeclipse.ui.npm.InstallLaunchShortcut"
+            icon= "icons/npm/npm_bottom_right_corner_run_half_size.png"
+            id= "org.nodeclipse.ui.npm.InstallLaunchShortcut"
+            label= "npm install"
+            modes= "run" >
+         <configurationType
+                id= "org.nodeclipse.ui.npm.LaunchConfigurationType" >
+         </configurationType>
+         <contextualLaunch>
+              <enablement>
+                 <with
+                       variable= "selection" >
+                    <count
+                          value= "1" >
+                    </count>
+                    <iterate>
+                       <and>
+                          <instanceof value="org.eclipse.core.resources.IFile"/>
+                          <test
+                                property= "org.eclipse.debug.ui.matchesPattern"
+                                value= "package.json" >
+                          </test>
+                       </and>
+                      </iterate>
+                 </with>
+              </enablement>
+         </contextualLaunch>
+       </shortcut>
+   </extension>
+   <extension
+         point= "org.eclipse.debug.ui.launchShortcuts" >
+      <shortcut
+            class= "org.nodeclipse.ui.npm.LaunchShortcut"
+            icon= "icons/npm/npm_bottom_right_corner_run_half_size.png"
+            id= "org.nodeclipse.ui.npm.LaunchShortcut"
+            label= "npm ..."
+            modes= "run" >
+         <configurationType
+                id= "org.nodeclipse.ui.npm.LaunchConfigurationType" >
+         </configurationType>
+         <contextualLaunch>
+              <enablement>
+                 <with
+                       variable= "selection" >
+                    <count
+                          value= "1" >
+                    </count>
+                    <iterate>
+                       <and>
+                          <instanceof value="org.eclipse.core.resources.IFile"/>
+                          <test
+                                property= "org.eclipse.debug.ui.matchesPattern"
+                                value= "package.json" >
+                          </test>
+                       </and>
+                      </iterate>
+                 </with>
+              </enablement>
+         </contextualLaunch>
+       </shortcut>
+   </extension>
+   <extension
+         point="org.eclipse.debug.ui.launchConfigurationTabGroups">
+          <launchConfigurationTabGroup
+       		class= "org.nodeclipse.ui.npm.LaunchConfigurationTabGroup"
+      		id= "org.nodeclipse.ui.npm.LaunchConfigurationTabGroup"
+        	type= "org.nodeclipse.ui.npm.LaunchConfigurationType" >
+		  </launchConfigurationTabGroup>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="org.nodeclipse.ui.preferences.PreferenceInitializer">
+      </initializer>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="org.nodeclipse.ui.preferences.NodePreferencePage"
+            id="org.nodeclipse.ui.preferences.NodePreferencePage"
+            name="Nodeclipse">
+      </page>
+   </extension>
+</plugin>

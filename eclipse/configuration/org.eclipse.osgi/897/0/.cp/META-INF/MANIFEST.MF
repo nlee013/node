@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.nodeclipse.ui;singleton:=true
+Archiver-Version: Plexus Archiver
+Built-By: Paul_Verest
+Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime,org.eclipse.co
+ re.resources,org.eclipse.ui.ide,org.eclipse.jface.text,org.eclipse.ui
+ .editors,org.eclipse.ui.console,org.eclipse.debug.ui,org.eclipse.ui.n
+ avigator,org.chromium.debug.ui;bundle-version="0.3.9",org.eclipse.wst
+ .jsdt.core;bundle-version="1.1.102",org.eclipse.wst.jsdt.ui;bundle-ve
+ rsion="1.1.102",org.nodeclipse.bundle.coffee,org.nodeclipse.bundle.ex
+ press,org.eclipse.ui.workbench
+Bundle-ManifestVersion: 2
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-Vendor: Nodeclipse organization
+Import-Package: org.nodeclipse.bundle.coffee,org.nodeclipse.bundle.exp
+ ress
+Export-Package: org.nodeclipse.ui,org.nodeclipse.ui.editors,org.nodecl
+ ipse.ui.perspectives,org.nodeclipse.ui.preferences,org.nodeclipse.ui.
+ util,org.nodeclipse.ui.wizards
+Bundle-Name: Nodeclipse
+Bundle-Version: 1.0.2.201509250223
+Bundle-Activator: org.nodeclipse.ui.Activator
+Created-By: Apache Maven 3.3.3
+Build-Jdk: 1.8.0_45
+

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;DatabaseExe/app9.js&apos; to &apos;app1.js&apos;" description="Rename resource &apos;app9.js&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="app9.js" name="app1.js" stamp="1572577616945" updateReferences="true"/>
+</session>

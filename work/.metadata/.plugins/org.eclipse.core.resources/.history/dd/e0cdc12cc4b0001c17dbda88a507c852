@@ -1,0 +1,11 @@
+/*전역객체와 method
+
+console 객체 안에 method가 있다 -종류 : dir, time, timeEnd
+process 객체 -종류 : drgv, env,exit
+exports 객체 
+ */
+
+var result = 0;
+
+console.time("계산시간");
+console.timeEnd("계산시간");
