@@ -1,0 +1,22 @@
+//파이프(pipe) 사용하기
+var fs = require("fs");
+
+var inName = "./output.txt";
+var outName = "./output3.txt";
+
+fs.exists(outName, function(fileName){
+	
+	if(fileName){
+		
+		fs.unlink(outName, function(err) {
+			if(err) throw err; //throw 오류를 표시해라
+			
+			console.log(outName + "삭제함...");
+		});
+		
+		return;
+	}
+	//파일 이름이 없으면
+	var inFile = fs.createReadStream(inName, {flags:"r"});
+	var outFile = fs.createWriteStream(outName, {flags:"w"});
+});

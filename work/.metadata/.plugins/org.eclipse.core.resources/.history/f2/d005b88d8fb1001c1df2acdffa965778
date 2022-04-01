@@ -1,0 +1,9 @@
+//Express 기본 모듈 불러오기
+
+var express = require("express");
+var http = require("http");
+
+//express 객체 생성
+var app = express();
+
+//기본 포트를 app객체의 속성으로 설정

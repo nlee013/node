@@ -1,0 +1,4 @@
+//파일에 데이터 쓰기
+var fs = require("fs");
+
+fs.writeFile("./output.txt", "오늘은 금요일~", );

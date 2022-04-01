@@ -1,0 +1,7 @@
+//로그 만들기
+
+//windston은 외부 module을 설치해야 호출가능
+//아래 2개의 module이 필요
+//아래 module은 node에 없으므로 아래방법과 같이 설치하면 된다.
+var winston = require("winston");
+var winstonDaily = require("winston-daily-rotate-file");

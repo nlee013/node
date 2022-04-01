@@ -1,0 +1,14 @@
+//http module로 웹서버 만들기
+
+var http = require("http"); //웹 환경을 만들때 반드시 필요
+
+//웹 서버 객체 생성
+var server = http.createServer();
+
+var port = 3000;
+
+server.listen(port, function() {
+	
+	console.log("web server 시작..");
+	
+});

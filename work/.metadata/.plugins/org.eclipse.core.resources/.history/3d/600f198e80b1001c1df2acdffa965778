@@ -1,0 +1,33 @@
+//로그 만들기
+
+//windston은 외부 module을 설치해야 호출가능
+//아래 2개의 module이 필요
+//아래 module은 node에 없으므로 아래방법과 같이 설치하면 된다.
+/*
+**********************************************************
+ 외부 모듈 설치하기(npm)
+----------------------------------------------------------
+package.json 파일생성
+npm init 실행 (기본 외부모듈 설치-기본값 엔터) -가장기본
+
+npm install 모듈이름 : 설치
+npm uninstall 모듈이름 : 삭제
+npm install -g npm : 모든 모듈 업데이트
+
+-----------------------------------------------------------
+save를 빼고 앞에만 쓰면 파일 설치만 된 것이지 패키지에 저장이 안되므로 --save까지 써주자
+
+npm install 모듈이름 --save : package.json 파일에 저장
+npm install 모듈이름 --g(--global) : 전역 환경에 파일 저장
+C:\Users\itwill\AppData\Roaming\npm\node_modules
+
+npm install : package.json 파일에 기록된 모든패키지 설치
+
+npm list : 설치된 패키지 정보
+npm list -g : 전역환경에 설치된 정보
+**********************************************************
+*/
+
+var winston = require("winston");
+var winstonDaily = require("winston-daily-rotate-file");
+

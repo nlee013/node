@@ -14,5 +14,9 @@
   ],
   "author": "",
   "license": "MIT",
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "winston": "^3.6.0",
+    "winston-daily-rotate-file": "^4.6.1"
+  }
 }

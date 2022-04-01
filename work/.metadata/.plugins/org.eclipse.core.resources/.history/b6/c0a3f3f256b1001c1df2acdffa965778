@@ -1,0 +1,12 @@
+/*
+ 내장 모듈 사용하기
+  
+  내장 모듈도 호출해야 사용 가능
+  
+ 
+
+*/
+ //OS
+  var os = require("os");
+  
+  console.log(os.hostname());
