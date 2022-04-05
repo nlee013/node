@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>login test3</title>
+</head>
+<body>
+
+<h1>LOGIN3</h1>
+<br/>
+<form action="/process/login" method="post">
+	<table>
+		<tr>
+			<td>아이디</td>
+			<td><input type="text" name="id"/></td>
+		</tr>
+		
+		<tr>
+			<td>비밀번호</td>
+			<td><input type="text" name="pwd"/></td>
+		</tr>
+	</table>
+	<input type="submit" value="로그인">
+</form>
+
+<a href="/process/product">상품 정보</a>
+<a href="/process/logout">로그아웃</a>
+
+</body>
+</html>

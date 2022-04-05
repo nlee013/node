@@ -11907,3 +11907,1016 @@ Caused by: tern.TernException: TernError: No type found at the given position.
 	at tern.server.nodejs.NodejsTernServer.request(NodejsTernServer.java:127)
 	at tern.server.protocol.TernResultsProcessorsFactory.makeRequestAndProcess(TernResultsProcessorsFactory.java:42)
 	... 2 more
+!SESSION 2022-04-04 09:34:11.382 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_311
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2022-04-04 09:34:19.783
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-04-04 09:34:19.784
+!MESSAGE A conflict occurred for CTRL+D:
+Binding(CTRL+D,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.delete.line,Delete Line,
+		Delete a line of text,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@16337c8e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(CTRL+D,
+	ParameterizedCommand(Command(io.emmet.eclipse.commands.match_pair_outward,Match Pair Outward,
+		,
+		Category(io.emmet.eclipse.commands.category,Emmet,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2603a76d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2022-04-04 09:34:20.877
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\zlzls'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.debug.ui 4 120 2022-04-04 09:39:14.784
+!MESSAGE org.eclipse.debug.ui.toggleBreakpointsTargetFactory extension failed to load breakpoint toggle target because the specified id is already registered.  Specified ID is: org.chromium.debug.ui.ChromiumToggleBreakpointTargetFactory
+
+!ENTRY org.eclipse.wst.jsdt.ui 4 2 2022-04-04 14:42:45.972
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.wst.jsdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.jsdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2490)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1026)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1508)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:741)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1445)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:2665)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:2690)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:319)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1170)
+	at org.eclipse.wst.jsdt.core.dom.AST.convertCompilationUnit(AST.java:264)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:265)
+	at org.eclipse.wst.jsdt.internal.core.Openable.generateInfos(Openable.java:241)
+	at org.eclipse.wst.jsdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:538)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1117)
+	at org.eclipse.wst.jsdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:177)
+	at org.eclipse.wst.jsdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:96)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:742)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:802)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1272)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:95)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:76)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:143)
+	at org.eclipse.wst.jsdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:85)
+	at org.eclipse.wst.jsdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:94)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
+	at org.eclipse.wst.jsdt.internal.ui.text.JavaReconciler.process(JavaReconciler.java:374)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+
+!ENTRY org.eclipse.wst.jsdt.ui 4 0 2022-04-04 14:42:45.974
+!MESSAGE Error in JSDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.jsdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2490)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1026)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1508)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:741)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1445)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:2665)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:2690)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:319)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1170)
+	at org.eclipse.wst.jsdt.core.dom.AST.convertCompilationUnit(AST.java:264)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:265)
+	at org.eclipse.wst.jsdt.internal.core.Openable.generateInfos(Openable.java:241)
+	at org.eclipse.wst.jsdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:538)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1117)
+	at org.eclipse.wst.jsdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:177)
+	at org.eclipse.wst.jsdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:96)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:742)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:802)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1272)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:95)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:76)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:143)
+	at org.eclipse.wst.jsdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:85)
+	at org.eclipse.wst.jsdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:94)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
+	at org.eclipse.wst.jsdt.internal.ui.text.JavaReconciler.process(JavaReconciler.java:374)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+
+!ENTRY org.eclipse.wst.jsdt.ui 4 2 2022-04-04 14:42:45.981
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.wst.jsdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.jsdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2490)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1026)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1508)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:741)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1445)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:2665)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:2690)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:319)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1170)
+	at org.eclipse.wst.jsdt.core.dom.JavaScriptUnitResolver.convert(JavaScriptUnitResolver.java:262)
+	at org.eclipse.wst.jsdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:887)
+	at org.eclipse.wst.jsdt.core.dom.ASTParser.createAST(ASTParser.java:647)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider$1.run(ASTProvider.java:581)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider.createAST(ASTProvider.java:574)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider.getAST(ASTProvider.java:509)
+	at org.eclipse.wst.jsdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:150)
+	at org.eclipse.wst.jsdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$3.run(SelectionListenerWithASTManager.java:135)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.jsdt.ui 4 0 2022-04-04 14:42:45.981
+!MESSAGE Error in JSDT Core during AST creation
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.jsdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2490)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1026)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1508)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:741)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1445)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:2665)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:2690)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:319)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1170)
+	at org.eclipse.wst.jsdt.core.dom.JavaScriptUnitResolver.convert(JavaScriptUnitResolver.java:262)
+	at org.eclipse.wst.jsdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:887)
+	at org.eclipse.wst.jsdt.core.dom.ASTParser.createAST(ASTParser.java:647)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider$1.run(ASTProvider.java:581)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider.createAST(ASTProvider.java:574)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider.getAST(ASTProvider.java:509)
+	at org.eclipse.wst.jsdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:150)
+	at org.eclipse.wst.jsdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$3.run(SelectionListenerWithASTManager.java:135)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.jsdt.ui 4 2 2022-04-04 14:42:48.540
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.wst.jsdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.jsdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2490)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1026)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1508)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:741)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1445)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:2665)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:2690)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:319)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1170)
+	at org.eclipse.wst.jsdt.core.dom.AST.convertCompilationUnit(AST.java:264)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:265)
+	at org.eclipse.wst.jsdt.internal.core.Openable.generateInfos(Openable.java:241)
+	at org.eclipse.wst.jsdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:538)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1117)
+	at org.eclipse.wst.jsdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:177)
+	at org.eclipse.wst.jsdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:96)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:742)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:802)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1272)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:95)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:76)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:143)
+	at org.eclipse.wst.jsdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:85)
+	at org.eclipse.wst.jsdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:94)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
+	at org.eclipse.wst.jsdt.internal.ui.text.JavaReconciler.process(JavaReconciler.java:374)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+
+!ENTRY org.eclipse.wst.jsdt.ui 4 0 2022-04-04 14:42:48.540
+!MESSAGE Error in JSDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.jsdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2490)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1026)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1508)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:741)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1445)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:2665)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:2690)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:319)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1170)
+	at org.eclipse.wst.jsdt.core.dom.AST.convertCompilationUnit(AST.java:264)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:265)
+	at org.eclipse.wst.jsdt.internal.core.Openable.generateInfos(Openable.java:241)
+	at org.eclipse.wst.jsdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:538)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1117)
+	at org.eclipse.wst.jsdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:177)
+	at org.eclipse.wst.jsdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:96)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:742)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:802)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1272)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:95)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:76)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:143)
+	at org.eclipse.wst.jsdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:85)
+	at org.eclipse.wst.jsdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:94)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
+	at org.eclipse.wst.jsdt.internal.ui.text.JavaReconciler.process(JavaReconciler.java:374)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+
+!ENTRY org.eclipse.wst.jsdt.ui 4 2 2022-04-04 14:42:48.550
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.wst.jsdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.jsdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2490)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1026)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1508)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:741)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1445)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:2665)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:2690)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:319)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1170)
+	at org.eclipse.wst.jsdt.core.dom.JavaScriptUnitResolver.convert(JavaScriptUnitResolver.java:262)
+	at org.eclipse.wst.jsdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:887)
+	at org.eclipse.wst.jsdt.core.dom.ASTParser.createAST(ASTParser.java:647)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider$1.run(ASTProvider.java:581)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider.createAST(ASTProvider.java:574)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider.getAST(ASTProvider.java:509)
+	at org.eclipse.wst.jsdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:150)
+	at org.eclipse.wst.jsdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$3.run(SelectionListenerWithASTManager.java:135)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.jsdt.ui 4 0 2022-04-04 14:42:48.550
+!MESSAGE Error in JSDT Core during AST creation
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.jsdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2490)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1026)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1508)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:741)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1445)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:2665)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:2690)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:319)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1170)
+	at org.eclipse.wst.jsdt.core.dom.JavaScriptUnitResolver.convert(JavaScriptUnitResolver.java:262)
+	at org.eclipse.wst.jsdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:887)
+	at org.eclipse.wst.jsdt.core.dom.ASTParser.createAST(ASTParser.java:647)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider$1.run(ASTProvider.java:581)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider.createAST(ASTProvider.java:574)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider.getAST(ASTProvider.java:509)
+	at org.eclipse.wst.jsdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:150)
+	at org.eclipse.wst.jsdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$3.run(SelectionListenerWithASTManager.java:135)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.jsdt.ui 4 2 2022-04-04 14:43:14.258
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.wst.jsdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.jsdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2490)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1026)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1508)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:741)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1445)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:2665)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:2690)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:319)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1170)
+	at org.eclipse.wst.jsdt.core.dom.AST.convertCompilationUnit(AST.java:264)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:265)
+	at org.eclipse.wst.jsdt.internal.core.Openable.generateInfos(Openable.java:241)
+	at org.eclipse.wst.jsdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:538)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1117)
+	at org.eclipse.wst.jsdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:177)
+	at org.eclipse.wst.jsdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:96)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:742)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:802)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1272)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:95)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:76)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:143)
+	at org.eclipse.wst.jsdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:85)
+	at org.eclipse.wst.jsdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:94)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
+	at org.eclipse.wst.jsdt.internal.ui.text.JavaReconciler.process(JavaReconciler.java:374)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+
+!ENTRY org.eclipse.wst.jsdt.ui 4 0 2022-04-04 14:43:14.258
+!MESSAGE Error in JSDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.jsdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2490)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1026)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1508)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:741)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1445)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:2665)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:2690)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:319)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1170)
+	at org.eclipse.wst.jsdt.core.dom.AST.convertCompilationUnit(AST.java:264)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:265)
+	at org.eclipse.wst.jsdt.internal.core.Openable.generateInfos(Openable.java:241)
+	at org.eclipse.wst.jsdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:538)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1117)
+	at org.eclipse.wst.jsdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:177)
+	at org.eclipse.wst.jsdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:96)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:742)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:802)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1272)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:95)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:76)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:143)
+	at org.eclipse.wst.jsdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:85)
+	at org.eclipse.wst.jsdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:94)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
+	at org.eclipse.wst.jsdt.internal.ui.text.JavaReconciler.process(JavaReconciler.java:374)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+
+!ENTRY org.eclipse.wst.jsdt.ui 4 2 2022-04-04 14:43:14.319
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.wst.jsdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.jsdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2490)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1026)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1508)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:741)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1445)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:2665)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:2690)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:319)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1170)
+	at org.eclipse.wst.jsdt.core.dom.JavaScriptUnitResolver.convert(JavaScriptUnitResolver.java:262)
+	at org.eclipse.wst.jsdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:887)
+	at org.eclipse.wst.jsdt.core.dom.ASTParser.createAST(ASTParser.java:647)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider$1.run(ASTProvider.java:581)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider.createAST(ASTProvider.java:574)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider.getAST(ASTProvider.java:509)
+	at org.eclipse.wst.jsdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:150)
+	at org.eclipse.wst.jsdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$3.run(SelectionListenerWithASTManager.java:135)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.jsdt.ui 4 0 2022-04-04 14:43:14.328
+!MESSAGE Error in JSDT Core during AST creation
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.jsdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2490)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1026)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1508)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:741)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1445)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:2665)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:2690)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:319)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1170)
+	at org.eclipse.wst.jsdt.core.dom.JavaScriptUnitResolver.convert(JavaScriptUnitResolver.java:262)
+	at org.eclipse.wst.jsdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:887)
+	at org.eclipse.wst.jsdt.core.dom.ASTParser.createAST(ASTParser.java:647)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider$1.run(ASTProvider.java:581)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider.createAST(ASTProvider.java:574)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider.getAST(ASTProvider.java:509)
+	at org.eclipse.wst.jsdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:150)
+	at org.eclipse.wst.jsdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$3.run(SelectionListenerWithASTManager.java:135)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.jsdt.ui 4 2 2022-04-04 15:08:30.754
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.wst.jsdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.jsdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2490)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1026)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1508)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:741)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1445)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:2665)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:2690)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:319)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1170)
+	at org.eclipse.wst.jsdt.core.dom.AST.convertCompilationUnit(AST.java:264)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:265)
+	at org.eclipse.wst.jsdt.internal.core.Openable.generateInfos(Openable.java:241)
+	at org.eclipse.wst.jsdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:538)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1117)
+	at org.eclipse.wst.jsdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:177)
+	at org.eclipse.wst.jsdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:96)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:742)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:802)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1272)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:95)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:76)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:143)
+	at org.eclipse.wst.jsdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:85)
+	at org.eclipse.wst.jsdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:94)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
+	at org.eclipse.wst.jsdt.internal.ui.text.JavaReconciler.process(JavaReconciler.java:374)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+
+!ENTRY org.eclipse.wst.jsdt.ui 4 0 2022-04-04 15:08:30.756
+!MESSAGE Error in JSDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.jsdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2490)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1026)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1508)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:741)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1445)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:2665)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:2690)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:319)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1170)
+	at org.eclipse.wst.jsdt.core.dom.AST.convertCompilationUnit(AST.java:264)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:265)
+	at org.eclipse.wst.jsdt.internal.core.Openable.generateInfos(Openable.java:241)
+	at org.eclipse.wst.jsdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:538)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1117)
+	at org.eclipse.wst.jsdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:177)
+	at org.eclipse.wst.jsdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:96)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:742)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:802)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1272)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:95)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:76)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:143)
+	at org.eclipse.wst.jsdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:85)
+	at org.eclipse.wst.jsdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:94)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
+	at org.eclipse.wst.jsdt.internal.ui.text.JavaReconciler.process(JavaReconciler.java:374)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+
+!ENTRY org.eclipse.wst.jsdt.ui 4 2 2022-04-04 15:08:30.766
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.wst.jsdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.jsdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2490)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1026)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1508)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:741)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1445)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:2665)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:2690)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:319)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1170)
+	at org.eclipse.wst.jsdt.core.dom.JavaScriptUnitResolver.convert(JavaScriptUnitResolver.java:262)
+	at org.eclipse.wst.jsdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:887)
+	at org.eclipse.wst.jsdt.core.dom.ASTParser.createAST(ASTParser.java:647)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider$1.run(ASTProvider.java:581)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider.createAST(ASTProvider.java:574)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider.getAST(ASTProvider.java:509)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider.getAST(ASTProvider.java:497)
+	at org.eclipse.wst.jsdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:150)
+	at org.eclipse.wst.jsdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$3.run(SelectionListenerWithASTManager.java:135)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.jsdt.ui 4 0 2022-04-04 15:08:30.767
+!MESSAGE Error in JSDT Core during AST creation
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.jsdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2490)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1026)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1508)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:741)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1445)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:2665)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:2690)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:319)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1170)
+	at org.eclipse.wst.jsdt.core.dom.JavaScriptUnitResolver.convert(JavaScriptUnitResolver.java:262)
+	at org.eclipse.wst.jsdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:887)
+	at org.eclipse.wst.jsdt.core.dom.ASTParser.createAST(ASTParser.java:647)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider$1.run(ASTProvider.java:581)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider.createAST(ASTProvider.java:574)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider.getAST(ASTProvider.java:509)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider.getAST(ASTProvider.java:497)
+	at org.eclipse.wst.jsdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:150)
+	at org.eclipse.wst.jsdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$3.run(SelectionListenerWithASTManager.java:135)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.jsdt.ui 4 2 2022-04-04 15:08:45.573
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.wst.jsdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.jsdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2490)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1026)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1508)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:741)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1445)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:2665)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:2690)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:319)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1170)
+	at org.eclipse.wst.jsdt.core.dom.JavaScriptUnitResolver.convert(JavaScriptUnitResolver.java:262)
+	at org.eclipse.wst.jsdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:887)
+	at org.eclipse.wst.jsdt.core.dom.ASTParser.createAST(ASTParser.java:647)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider$1.run(ASTProvider.java:581)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider.createAST(ASTProvider.java:574)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider.getAST(ASTProvider.java:509)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.hover.NLSStringHover.getHoverInfo(NLSStringHover.java:85)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo(BestMatchHover.java:99)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo(JavaEditorTextHoverProxy.java:67)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+
+!ENTRY org.eclipse.wst.jsdt.ui 4 0 2022-04-04 15:08:45.574
+!MESSAGE Error in JSDT Core during AST creation
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.jsdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2490)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1026)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1508)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:741)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1445)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:2665)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:2690)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:319)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1170)
+	at org.eclipse.wst.jsdt.core.dom.JavaScriptUnitResolver.convert(JavaScriptUnitResolver.java:262)
+	at org.eclipse.wst.jsdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:887)
+	at org.eclipse.wst.jsdt.core.dom.ASTParser.createAST(ASTParser.java:647)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider$1.run(ASTProvider.java:581)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider.createAST(ASTProvider.java:574)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider.getAST(ASTProvider.java:509)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.hover.NLSStringHover.getHoverInfo(NLSStringHover.java:85)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo(BestMatchHover.java:99)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo(JavaEditorTextHoverProxy.java:67)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+
+!ENTRY org.eclipse.wst.jsdt.ui 4 2 2022-04-04 15:08:45.582
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.wst.jsdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.jsdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2490)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1026)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1508)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:741)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1445)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:2665)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:2690)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:319)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1170)
+	at org.eclipse.wst.jsdt.core.dom.JavaScriptUnitResolver.convert(JavaScriptUnitResolver.java:262)
+	at org.eclipse.wst.jsdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:887)
+	at org.eclipse.wst.jsdt.core.dom.ASTParser.createAST(ASTParser.java:647)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider$1.run(ASTProvider.java:581)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider.createAST(ASTProvider.java:574)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider.getAST(ASTProvider.java:509)
+	at org.eclipse.wst.jsdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:150)
+	at org.eclipse.wst.jsdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$3.run(SelectionListenerWithASTManager.java:135)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.jsdt.ui 4 0 2022-04-04 15:08:45.583
+!MESSAGE Error in JSDT Core during AST creation
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.jsdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2490)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1026)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1508)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:741)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1445)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:2665)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:2690)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:319)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1170)
+	at org.eclipse.wst.jsdt.core.dom.JavaScriptUnitResolver.convert(JavaScriptUnitResolver.java:262)
+	at org.eclipse.wst.jsdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:887)
+	at org.eclipse.wst.jsdt.core.dom.ASTParser.createAST(ASTParser.java:647)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider$1.run(ASTProvider.java:581)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider.createAST(ASTProvider.java:574)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider.getAST(ASTProvider.java:509)
+	at org.eclipse.wst.jsdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:150)
+	at org.eclipse.wst.jsdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$3.run(SelectionListenerWithASTManager.java:135)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.jsdt.ui 4 2 2022-04-04 15:09:49.659
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.wst.jsdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.jsdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2490)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1026)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1508)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:741)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1445)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:2665)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:2690)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:319)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1170)
+	at org.eclipse.wst.jsdt.core.dom.JavaScriptUnitResolver.convert(JavaScriptUnitResolver.java:262)
+	at org.eclipse.wst.jsdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:887)
+	at org.eclipse.wst.jsdt.core.dom.ASTParser.createAST(ASTParser.java:647)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider$1.run(ASTProvider.java:581)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider.createAST(ASTProvider.java:574)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider.getAST(ASTProvider.java:509)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.hover.NLSStringHover.getHoverInfo(NLSStringHover.java:85)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo(BestMatchHover.java:99)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo(JavaEditorTextHoverProxy.java:67)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+
+!ENTRY org.eclipse.wst.jsdt.ui 4 0 2022-04-04 15:09:49.659
+!MESSAGE Error in JSDT Core during AST creation
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.jsdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2490)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1026)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1508)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:741)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1445)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:2665)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:2690)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:319)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1170)
+	at org.eclipse.wst.jsdt.core.dom.JavaScriptUnitResolver.convert(JavaScriptUnitResolver.java:262)
+	at org.eclipse.wst.jsdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:887)
+	at org.eclipse.wst.jsdt.core.dom.ASTParser.createAST(ASTParser.java:647)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider$1.run(ASTProvider.java:581)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider.createAST(ASTProvider.java:574)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider.getAST(ASTProvider.java:509)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.hover.NLSStringHover.getHoverInfo(NLSStringHover.java:85)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo(BestMatchHover.java:99)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo(JavaEditorTextHoverProxy.java:67)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+
+!ENTRY org.eclipse.wst.jsdt.ui 4 2 2022-04-04 15:13:27.037
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.wst.jsdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.jsdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2490)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1026)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1508)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:741)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1445)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:2665)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:2690)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:319)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1170)
+	at org.eclipse.wst.jsdt.core.dom.AST.convertCompilationUnit(AST.java:264)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:265)
+	at org.eclipse.wst.jsdt.internal.core.Openable.generateInfos(Openable.java:241)
+	at org.eclipse.wst.jsdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:538)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1117)
+	at org.eclipse.wst.jsdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:177)
+	at org.eclipse.wst.jsdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:96)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:742)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:802)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1272)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:95)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:76)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:143)
+	at org.eclipse.wst.jsdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:85)
+	at org.eclipse.wst.jsdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:94)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
+	at org.eclipse.wst.jsdt.internal.ui.text.JavaReconciler.process(JavaReconciler.java:374)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+
+!ENTRY org.eclipse.wst.jsdt.ui 4 0 2022-04-04 15:13:27.037
+!MESSAGE Error in JSDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.jsdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2490)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1026)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1508)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:741)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1445)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:2665)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:2690)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:319)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1170)
+	at org.eclipse.wst.jsdt.core.dom.AST.convertCompilationUnit(AST.java:264)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:265)
+	at org.eclipse.wst.jsdt.internal.core.Openable.generateInfos(Openable.java:241)
+	at org.eclipse.wst.jsdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:538)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1117)
+	at org.eclipse.wst.jsdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:177)
+	at org.eclipse.wst.jsdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:96)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:742)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:802)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1272)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:95)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:76)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:143)
+	at org.eclipse.wst.jsdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:85)
+	at org.eclipse.wst.jsdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:94)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
+	at org.eclipse.wst.jsdt.internal.ui.text.JavaReconciler.process(JavaReconciler.java:374)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+
+!ENTRY org.eclipse.wst.jsdt.ui 4 2 2022-04-04 15:13:27.160
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.wst.jsdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.jsdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2490)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1026)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1508)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:741)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1445)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:2665)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:2690)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:319)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1170)
+	at org.eclipse.wst.jsdt.core.dom.JavaScriptUnitResolver.convert(JavaScriptUnitResolver.java:262)
+	at org.eclipse.wst.jsdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:887)
+	at org.eclipse.wst.jsdt.core.dom.ASTParser.createAST(ASTParser.java:647)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider$1.run(ASTProvider.java:581)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider.createAST(ASTProvider.java:574)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider.getAST(ASTProvider.java:509)
+	at org.eclipse.wst.jsdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:150)
+	at org.eclipse.wst.jsdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$3.run(SelectionListenerWithASTManager.java:135)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.jsdt.ui 4 0 2022-04-04 15:13:27.160
+!MESSAGE Error in JSDT Core during AST creation
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.jsdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2490)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1026)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1508)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:741)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1445)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:2665)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:2690)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:319)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1170)
+	at org.eclipse.wst.jsdt.core.dom.JavaScriptUnitResolver.convert(JavaScriptUnitResolver.java:262)
+	at org.eclipse.wst.jsdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:887)
+	at org.eclipse.wst.jsdt.core.dom.ASTParser.createAST(ASTParser.java:647)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider$1.run(ASTProvider.java:581)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider.createAST(ASTProvider.java:574)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider.getAST(ASTProvider.java:509)
+	at org.eclipse.wst.jsdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:150)
+	at org.eclipse.wst.jsdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$3.run(SelectionListenerWithASTManager.java:135)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.jsdt.ui 4 2 2022-04-04 15:13:28.512
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.wst.jsdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.jsdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2490)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1026)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1508)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:741)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1445)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:2665)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:2690)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:319)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1170)
+	at org.eclipse.wst.jsdt.core.dom.JavaScriptUnitResolver.convert(JavaScriptUnitResolver.java:262)
+	at org.eclipse.wst.jsdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:887)
+	at org.eclipse.wst.jsdt.core.dom.ASTParser.createAST(ASTParser.java:647)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider$1.run(ASTProvider.java:581)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider.createAST(ASTProvider.java:574)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider.getAST(ASTProvider.java:509)
+	at org.eclipse.wst.jsdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:150)
+	at org.eclipse.wst.jsdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$3.run(SelectionListenerWithASTManager.java:135)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.jsdt.ui 4 0 2022-04-04 15:13:28.513
+!MESSAGE Error in JSDT Core during AST creation
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.wst.jsdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2490)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1026)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1508)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:741)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1445)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:2665)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:2690)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:319)
+	at org.eclipse.wst.jsdt.core.dom.ASTConverter.convert(ASTConverter.java:1170)
+	at org.eclipse.wst.jsdt.core.dom.JavaScriptUnitResolver.convert(JavaScriptUnitResolver.java:262)
+	at org.eclipse.wst.jsdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:887)
+	at org.eclipse.wst.jsdt.core.dom.ASTParser.createAST(ASTParser.java:647)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider$1.run(ASTProvider.java:581)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider.createAST(ASTProvider.java:574)
+	at org.eclipse.wst.jsdt.internal.ui.javaeditor.ASTProvider.getAST(ASTProvider.java:509)
+	at org.eclipse.wst.jsdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:150)
+	at org.eclipse.wst.jsdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$3.run(SelectionListenerWithASTManager.java:135)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.event 4 0 2022-04-04 15:57:21.448
+!MESSAGE Exception while dispatching event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/model/ui/UIElement/widget/SET] to handler org.eclipse.e4.ui.services.internal.events.UIEventHandler@5de4ccaa
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.ui.internal.NavigationHistory.getDisplay(NavigationHistory.java:176)
+	at org.eclipse.ui.internal.NavigationHistory.markEditor(NavigationHistory.java:193)
+	at org.eclipse.ui.internal.WorkbenchPage.updateActiveEditorSources(WorkbenchPage.java:407)
+	at org.eclipse.ui.internal.WorkbenchPage.firePartClosed(WorkbenchPage.java:4995)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart$1.handleEvent(CompatibilityPart.java:98)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler$1.run(UIEventHandler.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:187)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:156)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4734)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:218)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:36)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:135)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:78)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:39)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:81)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:59)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:374)
+	at org.eclipse.e4.ui.model.application.ui.impl.UIElementImpl.setWidget(UIElementImpl.java:261)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.unbindWidget(SWTPartRenderer.java:150)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer$1.widgetDisposed(SWTPartRenderer.java:138)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:123)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:816)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:874)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:819)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:874)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:819)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:874)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:819)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:874)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:819)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:874)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:819)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:874)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:819)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:874)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:819)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:874)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:819)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:874)
+	at org.eclipse.swt.widgets.Canvas.releaseChildren(Canvas.java:165)
+	at org.eclipse.swt.widgets.Decorations.releaseChildren(Decorations.java:789)
+	at org.eclipse.swt.widgets.Shell.releaseChildren(Shell.java:1290)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:819)
+	at org.eclipse.swt.widgets.Widget.dispose(Widget.java:454)
+	at org.eclipse.swt.widgets.Decorations.dispose(Decorations.java:447)
+	at org.eclipse.swt.widgets.Shell.dispose(Shell.java:715)
+	at org.eclipse.swt.widgets.Display.release(Display.java:3811)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:295)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3292)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(OS.java:2544)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:498)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4705)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1626)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2075)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
+	at org.eclipse.swt.internal.win32.OS.PeekMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.PeekMessage(OS.java:3141)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3756)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:832)
+	at org.eclipse.jface.window.Window.open(Window.java:808)
+	at org.eclipse.jface.dialogs.MessageDialog.open(MessageDialog.java:341)
+	at org.eclipse.jface.dialogs.MessageDialogWithToggle.open(MessageDialogWithToggle.java:114)
+	at org.eclipse.jface.dialogs.MessageDialogWithToggle.openOkCancelConfirm(MessageDialogWithToggle.java:209)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchWindowAdvisor.promptOnExit(IDEWorkbenchWindowAdvisor.java:218)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor$2.handleEvent(IDEWorkbenchAdvisor.java:171)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4346)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3305)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(OS.java:2544)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:498)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4705)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1626)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2075)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
+	at org.eclipse.swt.internal.win32.OS.PeekMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.PeekMessage(OS.java:3141)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3756)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+!SESSION 2022-04-04 16:19:40.011 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_311
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2022-04-04 16:19:41.576
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.egit.ui 2 0 2022-04-04 16:19:49.408
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\zlzls'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface 2 0 2022-04-04 16:19:58.869
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-04-04 16:19:58.869
+!MESSAGE A conflict occurred for CTRL+D:
+Binding(CTRL+D,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.delete.line,Delete Line,
+		Delete a line of text,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@763ff91,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(CTRL+D,
+	ParameterizedCommand(Command(io.emmet.eclipse.commands.match_pair_outward,Match Pair Outward,
+		,
+		Category(io.emmet.eclipse.commands.category,Emmet,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@533053b4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.nodeclipse.ui 1 0 2022-04-04 16:20:20.438
+!MESSAGE RelativityFileSystemStructureProvider.cllectFiles() called. file count=0
+
+!ENTRY org.nodeclipse.ui 1 0 2022-04-04 16:20:20.447
+!MESSAGE templateRoot: D:\node\eclipse\configuration\org.eclipse.osgi\897\0\.cp\templates\common-templates
+
+!ENTRY org.nodeclipse.ui 1 0 2022-04-04 16:20:20.447
+!MESSAGE RelativityFileSystemStructureProvider.getContents() called. elemnt=D:\node\eclipse\configuration\org.eclipse.osgi\897\0\.cp\templates\common-templates\.jshintrc
+
+!ENTRY org.nodeclipse.ui 1 0 2022-04-04 16:20:20.450
+!MESSAGE RelativityFileSystemStructureProvider.getContents() called. elemnt=D:\node\eclipse\configuration\org.eclipse.osgi\897\0\.cp\templates\common-templates\.settings\.jsdtscope
+
+!ENTRY org.nodeclipse.ui 1 0 2022-04-04 16:20:20.453
+!MESSAGE RelativityFileSystemStructureProvider.getContents() called. elemnt=D:\node\eclipse\configuration\org.eclipse.osgi\897\0\.cp\templates\common-templates\.settings\com.eclipsesource.jshint.ui.prefs
+
+!ENTRY org.nodeclipse.ui 1 0 2022-04-04 16:20:20.493
+!MESSAGE RelativityFileSystemStructureProvider.getContents() called. elemnt=D:\node\eclipse\configuration\org.eclipse.osgi\897\0\.cp\templates\common-templates\.settings\org.eclipse.wst.jsdt.core.prefs
+
+!ENTRY org.nodeclipse.ui 1 0 2022-04-04 16:20:20.495
+!MESSAGE RelativityFileSystemStructureProvider.getContents() called. elemnt=D:\node\eclipse\configuration\org.eclipse.osgi\897\0\.cp\templates\common-templates\.settings\org.eclipse.wst.jsdt.ui.superType.container
+
+!ENTRY org.nodeclipse.ui 1 0 2022-04-04 16:20:20.496
+!MESSAGE RelativityFileSystemStructureProvider.getContents() called. elemnt=D:\node\eclipse\configuration\org.eclipse.osgi\897\0\.cp\templates\common-templates\.settings\org.eclipse.wst.jsdt.ui.superType.name
+
+!ENTRY org.nodeclipse.ui 1 0 2022-04-04 16:20:20.497
+!MESSAGE RelativityFileSystemStructureProvider.getContents() called. elemnt=D:\node\eclipse\configuration\org.eclipse.osgi\897\0\.cp\templates\common-templates\.sublime-project
+
+!ENTRY org.nodeclipse.ui 1 0 2022-04-04 16:20:20.498
+!MESSAGE RelativityFileSystemStructureProvider.getContents() called. elemnt=D:\node\eclipse\configuration\org.eclipse.osgi\897\0\.cp\templates\common-templates\README.md
+
+!ENTRY org.nodeclipse.ui 4 4 2022-04-04 16:20:20.544
+!MESSAGE Unexpected Exception
+!STACK 0
+java.lang.reflect.InvocationTargetException
+	at org.nodeclipse.ui.wizards.ExpressProjectWizard$2.run(ExpressProjectWizard.java:147)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: org.eclipse.core.runtime.CoreException: package.json not found
+	at org.nodeclipse.ui.wizards.ExpressProjectWizard.rewritePackageJson(ExpressProjectWizard.java:289)
+	at org.nodeclipse.ui.wizards.ExpressProjectWizard.access$4(ExpressProjectWizard.java:285)
+	at org.nodeclipse.ui.wizards.ExpressProjectWizard$2.run(ExpressProjectWizard.java:137)
+	... 1 more
+Root exception:
+org.eclipse.core.runtime.CoreException: package.json not found
+	at org.nodeclipse.ui.wizards.ExpressProjectWizard.rewritePackageJson(ExpressProjectWizard.java:289)
+	at org.nodeclipse.ui.wizards.ExpressProjectWizard.access$4(ExpressProjectWizard.java:285)
+	at org.nodeclipse.ui.wizards.ExpressProjectWizard$2.run(ExpressProjectWizard.java:137)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.eclipse.debug.ui 4 120 2022-04-04 16:31:55.075
+!MESSAGE org.eclipse.debug.ui.toggleBreakpointsTargetFactory extension failed to load breakpoint toggle target because the specified id is already registered.  Specified ID is: org.chromium.debug.ui.ChromiumToggleBreakpointTargetFactory

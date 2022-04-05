@@ -1,0 +1,144 @@
+//session 사용
+//npm install multer -save
+
+//Express 기본 모듈---------
+require("dotenv").config();
+var express = require("express");
+var http = require("http");
+var path = require("path");
+var serveStatic = require("serve-static");//특정 폴더를 패스로 접근
+var expressErrorHandler = require("express-error-handler");
+var cookieParser = require("cookie-parser");
+var expressSession = require("express-session");
+
+var multer = require("multer");
+
+//express 객체 생성-------------------------------------------------
+var app = express(); //app가 express
+
+app.set("port", process.env.PORT);
+app.use(express.urlencoded({extended:false}));
+app.use("/public", serveStatic(path.join(__dirname, "public"))); //가상주소: /public
+app.use(cookieParser());
+
+app.use("/upload", serveStatic(path.join(__dirname, "uploads")));
+
+//storage의 저장기준 설정
+var storage = multer.diskStorage({
+	
+	destination:function(req, file, callback){
+	
+		callback(null, "uploads");
+	
+	},
+	filename:function(req, file, callback){
+		
+		var extension = path.extname(file.originalname); //파일 이름
+		var basename = path.basename(file.originalname, extension); //확장자
+		
+		callback(null, basename + extension); //abc.txt
+		
+		//파일의 형태를 바꿀수 있음
+	}
+	
+});
+/*
+secret – 쿠키를 임의로 변조하는것을 방지하기 위한 sign 값 입니다. 원하는 값을 넣으면 됩니다.
+resave – 세션을 언제나 저장할 지 (변경되지 않아도) 정하는 값입니다. 
+express-session documentation에서는 이 값을 false 로 하는것을 권장하고 필요에 따라 true로 설정합니다.
+saveUninitialized – uninitialized 세션은 새로 생겼지만 변경되지 않은 세션을 의미합니다. 
+Documentation에서 이 값을 true로 설정하는것을 권장합니다.
+*/
+
+//위에서 만든 storage를 기본으로 upload
+var upload = multer({
+	
+	storage:storage,
+	limits:{
+		
+		files:10,
+		fileSize:1024*1024*1024 //1gb 기가
+		
+	}
+
+});
+
+//라우터 객체 생성
+var router = express.Router();
+
+router.route("/process/file").post(upload.array("upload", 1), function (req, res) {
+	
+	console.log("/process/login 호출..");
+	
+	try {
+		
+		var files = req.files;//file info를 배열로 받음
+		
+		console.log(req.files[0]);
+		
+		//파일 정보를 저장할 변수
+		var originalName = "";
+		var fileName = "";//저장될 파일이름
+		var mimeType = "";
+		var size = 0;
+		
+		if(Array.isArray(files)){
+			 
+			console.log("파일 갯수: " files.length + "개");
+			
+			for(var i = 0; i < files.length; i++){
+				
+				originalName = files[i].originalname;//method이름이므로 바꾸면 안된다.소문자
+				fileName = files[i].filename;
+				mimeType = files[i].mimetype;;
+				size = files[i].size;
+			}
+		}
+		
+		res.writeHead("200", {"Content-type":"text/html;charset=utf-8"});
+		res.write("<h1>파일 업로드 성공</h1>");
+		res.write("<hr/>");
+		res.write("<div>원본 파일명:" + originalName + "</p></div>");
+		res.write("<div>저장 파일명:" + filename + "</p></div>");
+		res.write("<div>MimeTYpe :" + mimeType + "</p></div>");
+		res.write("<div>파일 크기 :" + size + "</p></div>");
+		
+		res.end();
+		
+	} catch (e) {
+		console.dir(err.stack);
+	}
+});
+
+//라우터 객체를 app객체에 추가
+app.use("/",router);
+
+var errorHandler = expressErrorHandler({
+	
+	static:{
+		"404":"./public/404.html"
+	}
+	
+	
+});
+
+app.use(expressErrorHandler.httpError(404));
+app.use(errorHandler);
+
+
+http.createServer(app).listen(app.get("port"), function(){
+
+	console.log("Express Server를 시작했습니다: " + app.get("port"));//3000이 찍힌것은 env에서 가져온것
+});
+
+var server = http.createServer();
+var host = "localhost";
+var port = 3000;
+server.listen(port,host,5000,function(){ // 5000명 동시접속
+	
+	
+});
+
+
+
+
