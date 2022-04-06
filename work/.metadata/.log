@@ -879,3 +879,30 @@ org.eclipse.core.runtime.CoreException: package.json not found
 	at org.nodeclipse.ui.wizards.ExpressProjectWizard.access$4(ExpressProjectWizard.java:285)
 	at org.nodeclipse.ui.wizards.ExpressProjectWizard$2.run(ExpressProjectWizard.java:137)
 	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.eclipse.core.resources 4 2 2022-04-06 16:29:22.024
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.IllegalArgumentException: JavaScript file name {0} must end with .js
+	at org.eclipse.wst.jsdt.internal.core.PackageFragment.getClassFile(PackageFragment.java:192)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelManager.createClassFileFrom(JavaModelManager.java:873)
+	at org.eclipse.wst.jsdt.core.JavaScriptCore.createClassFileFrom(JavaScriptCore.java:1262)
+	at org.eclipse.wst.jsdt.internal.core.DeltaProcessor.createElement(DeltaProcessor.java:788)
+	at org.eclipse.wst.jsdt.internal.core.DeltaProcessor.updateCurrentDeltaAndIndex(DeltaProcessor.java:2353)
+	at org.eclipse.wst.jsdt.internal.core.DeltaProcessor.traverseDelta(DeltaProcessor.java:2055)
+	at org.eclipse.wst.jsdt.internal.core.DeltaProcessor.traverseDelta(DeltaProcessor.java:2104)
+	at org.eclipse.wst.jsdt.internal.core.DeltaProcessor.traverseDelta(DeltaProcessor.java:2104)
+	at org.eclipse.wst.jsdt.internal.core.DeltaProcessor.traverseDelta(DeltaProcessor.java:2104)
+	at org.eclipse.wst.jsdt.internal.core.DeltaProcessor.traverseDelta(DeltaProcessor.java:2104)
+	at org.eclipse.wst.jsdt.internal.core.DeltaProcessor.traverseDelta(DeltaProcessor.java:2152)
+	at org.eclipse.wst.jsdt.internal.core.DeltaProcessor.processResourceDelta(DeltaProcessor.java:1786)
+	at org.eclipse.wst.jsdt.internal.core.DeltaProcessor.resourceChanged(DeltaProcessor.java:1930)
+	at org.eclipse.wst.jsdt.internal.core.DeltaProcessingState.resourceChanged(DeltaProcessingState.java:389)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:378)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1498)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:45)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
