@@ -1,0 +1,13 @@
+
+//module.exports를 사용하면 exports.group는 무시되고 실행된다
+module.exports = {
+		
+		getUser : function() {
+			
+			return {id:"suzi", name:"배수지"};
+		},
+		group : {id:"inna", name:"유인나"}//사용불가 -함수로 호출해야 가능..?
+		
+}
+
+exports.group={id:"insun", name:"정인선"};

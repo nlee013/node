@@ -1,0 +1,5 @@
+export.getUser = function() {
+	
+	return {id:"suzi", name:"배수지"};
+	
+}

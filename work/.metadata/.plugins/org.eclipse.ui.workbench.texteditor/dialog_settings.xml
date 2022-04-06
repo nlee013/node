@@ -2,22 +2,23 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="d" key="selection"/>
+		<item value="oracledb" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="oracledb"/>
+			<item value="rea"/>
+			<item value="reas"/>
+			<item value="pwd"/>
+			<item value="password"/>
+			<item value="findByid"/>
+			<item value="static"/>
 			<item value="d"/>
-			<item value="coffeeShopSchema"/>
-			<item value="CoffeeShopSchema"/>
-			<item value="passport"/>
-			<item value="socketID"/>
-			<item value="authenticate "/>
-			<item value="authenticate 호출됨"/>
-			<item value="plainText"/>
 		</list>
 		<list key="replacehistory">
+			<item value="pwd"/>
 			<item value=""/>
 			<item value="inputPwd"/>
 		</list>

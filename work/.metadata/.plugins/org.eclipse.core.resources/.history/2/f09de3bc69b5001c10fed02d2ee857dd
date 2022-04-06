@@ -1,0 +1,47 @@
+//Oracle 사용
+//npm install oracledb --save
+
+var oracledb = require("oracledb");
+var dbConfig = require("./dbConfig.js");
+
+oracledb.autoCommit = true;//auto commit
+
+oracledb.getConnection({
+	
+	user:dbConfig.user,
+	password:dbConfig.password,
+	connectString:dbConfig.connectString
+	},
+	function(err, conn) {
+		
+		if(err) {throw err;}
+		
+		console.log("Oracle DB 연결 성공!!");
+		
+		var sql;
+		
+		//create table sql
+		sql = "create table cuser (id varchar2(10), password varchar2(10), name varchar2(10), age number)";
+		
+		conn.execute(sql);
+		
+		console.log("table 생성 완료!");
+		
+		//insert
+		sql = "insert into cuser values(:id, :pwd, :name, :age)";
+		binds = [["a123", "123", "suzi", 27 ]];
+		
+		binds = [
+		         ["b123", "123", "suzi", 27 ]
+		         ["c123", "123", "suzi", 27 ]
+		         ["d123", "123", "suzi", 27 ]
+		         ["e123", "123", "suzi", 27 ]
+		        ];
+		
+		
+		var result = conn.executeMany(sql, binds, function(){//{}는 함수자리
+		
+		console.log("insert 완료!");
+		
+		});
+});

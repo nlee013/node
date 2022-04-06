@@ -1,0 +1,6 @@
+var printUser = require("./user6").printUser;
+
+printUser();
+
+//var printUser = require("./user6")
+//prinUser.printUser();

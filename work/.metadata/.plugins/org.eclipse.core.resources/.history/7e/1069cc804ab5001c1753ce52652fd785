@@ -1,0 +1,40 @@
+//var mongd = require("mongod");
+var mongoose = require("mongoose");
+
+var database;
+var userSchema;
+var useModel;
+
+function connectDB() {
+	
+	var databaseUrl = "mongodb://localhost:27017/shopping";
+	
+	mongoose.connect(databaseUrl);
+	database = mongoose.connection;
+	
+	database.on("open", function() {
+		
+		console.log("database에 연결된다..");
+		
+		createUserSchema();
+		
+		insertData();
+		
+	});
+	
+	database.on("error", function() {
+		
+		console.log("database 연결 error");
+	});
+	
+	database.on("disconnected", function() {
+	
+		console.log("database 연결 종료..");
+	});
+	
+}
+
+
+function created() {
+	
+}
