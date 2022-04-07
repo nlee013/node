@@ -36,18 +36,18 @@ function connectDB() {
 	});
 	
 }
-
+//DB연결 함수 호출
 connectDB();
 
 function createUserSchema() {
 	
-	//schema 정의----------------------
+	//schema 정의---------------------
 	UserSchema = mongoose.Schema({
 		
 		id:{type:String, required:true, unique:true},
 		name:{type:String},
-		age:{type:Number, 'default':20},
-		created:{type:Date, 'dafault':Date.now}
+		//age:{type:Number, 'default':20},
+		//created:{type:Date, 'dafault':Date.now}
 	});
 	
 	//virtual 함수
@@ -56,7 +56,7 @@ function createUserSchema() {
 		.set(function(info) {
 				
 		//{"info":"suzi", 배수지}
-		var array = info.split(",");
+		var array = info.split(",");//,로 구분
 				
 			this.id = array[0];
 			this.name = array[1];
@@ -79,7 +79,7 @@ function insertData() {
 	
 	//model : find, save, update, remove
 	
-	var user = new UserModel({"info": "suzi,배수지"});
+	var user = new UserModel({"info": "sss,리나"});
 	
 	user.save(function(err) {
 		

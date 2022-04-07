@@ -1,6 +1,6 @@
 //암호화
 //npm install crypto --save
-//crypto 모듈은 pwd + salt(key)를 합쳐서 함호화
+//crypto 모듈은 pwd + salt(key)를 합쳐서 암호화
 
 
 //Express 기본 모듈
@@ -55,8 +55,8 @@ function createUserSchema(){
 	
 	//스키마 정의
 	UserSchema = mongoose.Schema({
-		id:{type:String,required:true,unique:true},
-		hashed_password:{type:String,required:true},
+		id:{type:String,required:true,unique:true},//반드시 써야하나? required:not null, unique:primary key 와 비슷한 개념
+		hashed_password:{type:String,required:true},//암호화된 pwd
 		salt:{type:String,required:true},
 		name:{type:String},		
 		age:{type:Number,'default':20},
@@ -64,43 +64,48 @@ function createUserSchema(){
 	});		
 	
 	UserSchema
-		.virtual("pwd")
-		.set(function(pwd){
+		.virtual("pwd")//가상 속성 이름
+		.set(function(pwd){ //위 변수 읽어오기
 			
+			//this._password는 외부에서 가져온것//앞의 this값과 다르게 구분짓기 위해서
 			this._password = pwd;
-			this.salt = this.makeSalt();
+			//.virtual("pwd")
+			this.salt = this.makeSalt();//.makeSalt() method 아래에 만듦
 			this.hashed_password = this.encryptPassword(pwd);
 			
 		})
 		.get(function(){
 			
-			return this._password;
+			return this._password;//위에 정의해준 hashed_password에 반환
 			
 		});
 	
 		UserSchema.method("makeSalt",function(){
 			
 			console.log("date : " + new Date().valueOf());//12321423423
-			console.log("math : " + Math.random());//0.12321423423
+			console.log("math : " + Math.random());//0.12321423423 실시간으로 변하는 난수값을 암호화에 사용
 			
 			return Math.round((new Date().valueOf() * Math.random())) + "";
 			
 		});
 		
 		//암호화 작업
-		UserSchema.method("encryptPassword",function(inputPwd,inSalt){
+		UserSchema.method("encryptPassword",function(inputPwd,inSalt){//비밀번호와 salt값 줘야 아래에서 합쳐짐
 			
-			if(inSalt){				
-				return crypto.createHmac("sha1",inSalt).update(inputPwd).digest("hex");				
+			if(inSalt){	//sha1에서 1이 암호화 등급. inSalt, inputPwd 사용자 입력값?			
+				return crypto.createHmac("sha1",inSalt).update(inputPwd).digest("hex");
+		//inSalt와 사용자가 입력한 Pwd를 합쳐 sha1방식으로 암호화 한 파일을 16진수의 hex상태로 저장되는것(컴퓨터 언어로 바꿔줌)
+				
 			}else{				
+				
 				return crypto.createHmac("sha1",this.salt).update(inputPwd).digest("hex");				
 			}
 			
 			
 		});
 		
-		//로그인할때 암호화된 pwd와 비교
-		UserSchema.method("authenticate",function(inputPwd,inSalt,hashed_password){
+		//로그인할때 암호화된 pwd와 비교(인증)
+		UserSchema.method("authenticate",function(inputPwd,inSalt,hashed_password){//입력된 암호화, salt, 암호화된 비밀번호
 			
 			if(inSalt){
 				
@@ -109,14 +114,14 @@ function createUserSchema(){
 				console.log("DB에 저장되어있는 pwd: " + hashed_password);				
 				
 				return this.encryptPassword(inputPwd,inSalt)==hashed_password;//true,false
-				
+				//입력값과 db값이 일치하면 true, 일치하지 않으면 false값을 반환
 			}else{
 				
 				console.log("사용자 입력 pwd: " + inputPwd);
 				console.log("암호화된 pwd: " + this.encryptPassword(inputPwd,inSalt));
 				console.log("DB에 저장되어있는 pwd: " + hashed_password);				
 				
-				return this.encryptPassword(inputPwd)==this.hashed_password;//true,false				
+				return this.encryptPassword(inputPwd) == this.hashed_password;//true,false				
 				
 			}		
 			

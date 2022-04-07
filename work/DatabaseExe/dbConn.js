@@ -31,6 +31,7 @@ oracledb.getConnection({
 		//insert
 		sql = "insert into cuser values (:id,:pw,:name,:age)";
 		
+		//binds = ["b123","123","suzi",27]
 		
 		binds = [
 		 		 ["b123","123","suzi",27],
@@ -70,11 +71,11 @@ oracledb.getConnection({
 			
 			console.log(result.rows);
 			
-			doRelease(conn);
+			doRelease(conn);//db.close 아래 함수
 		});
 	});
 
-
+//db.close와 같은 애
 function doRelease(conn){
 	
 	conn.release(function(err){

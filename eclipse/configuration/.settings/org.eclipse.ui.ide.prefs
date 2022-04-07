@@ -1,5 +1,5 @@
 MAX_RECENT_WORKSPACES=5
-RECENT_WORKSPACES=D\:\\Node\\work\nD\:\\NodeJS\\work
+RECENT_WORKSPACES=D\:\\node\\work\nD\:\\node_\\work\nD\:\\NodeJS\\work
 RECENT_WORKSPACES_PROTOCOL=3
 SHOW_WORKSPACE_SELECTION_DIALOG=false
 eclipse.preferences.version=1
