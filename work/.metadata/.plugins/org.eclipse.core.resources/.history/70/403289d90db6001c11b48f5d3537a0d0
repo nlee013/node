@@ -1,0 +1,138 @@
+var login = function name(req, res) {
+	
+	console.log("/process/login 호출..");
+	
+	var id = req.body.id;
+	var pwd = req.body.pwd;
+	
+	if(database){
+		
+		authUser(database, id, pwd, function(err,result){
+			
+			if(err) {throw err;}
+			
+			if(result){
+				
+				var userName = result[0].name;
+				
+				res.writeHead("200",{"Content-type":"text/html;charset=utf-8"});
+				res.write("<h1>로그인 성공</h1>")
+				res.write("<div>아이디: " + id + "</div>");
+				res.write("<div>이름: " + userName + "</div>");
+				res.write("<br/><br/><a href='/public/login.html'>다시 로그인</a>");
+				res.end();				
+				
+			}else{
+				
+				res.writeHead("200",{"Content-type":"text/html;charset=utf-8"});
+				res.write("<h1>로그인 실패</h1>")				
+				res.write("<div>아이디 또는 패스워드를 확인하세요</div>");
+				res.write("<br/><br/><a href='/public/login.html'>다시 로그인</a>");
+				res.end();
+				
+			}
+			
+		});
+		
+	}else{
+		
+		res.writeHead("200",{"Content-type":"text/html;charset=utf-8"});
+		res.write("<h1>데이터베이스 연결 실패</h1>")				
+		res.write("<div>데이터베이스를 연결하지 못했습니다.</div>");		
+		res.end();	
+		
+	}
+};
+
+var addUsers = function(req, res){//아래 함수와 이름이 같아서 addUsers로 수정함
+	
+console.log("/process/addUser 호출..");
+	
+	var id = req.body.id;
+	var pwd = req.body.pwd;
+	var name = req.body.name;
+	
+	if(database){
+		
+		addUser(database, id, pwd, name, function(err,result){
+			
+			if(err) {throw err;}
+			
+			if(result){
+				
+				res.writeHead("200",{"Content-type":"text/html;charset=utf-8"});
+				res.write("<h1>사용자 추가 성공</h1>")	
+				res.end();			
+				
+			}else{
+				
+				res.writeHead("200",{"Content-type":"text/html;charset=utf-8"});
+				res.write("<h1>사용자 추가 실패</h1>")	
+				res.end();	
+				
+			}
+		});
+		
+	}else{
+		
+		res.writeHead("200",{"Content-type":"text/html;charset=utf-8"});
+		res.write("<h1>데이터베이스 연결 실패</h1>")				
+		res.write("<div>데이터베이스를 연결하지 못했습니다.</div>");		
+		res.end();
+		
+	}
+	
+}
+
+var listUser = function(req, res) {
+	
+console.log("/process/listUser 호출..");
+	
+	if(database){
+		
+		UserModel.findAll(function(err,result){
+			
+			if(err){
+				res.writeHead("200",{"Content-type":"text/html;charset=utf-8"});
+				res.write("<h2>사용자 리스트 조회중 에러 발생</h2>");						
+				res.end();
+				
+				return;
+			}
+			
+			if(result){
+			
+				res.writeHead("200",{"Content-type":"text/html;charset=utf-8"});
+				res.write("<h2>사용자 리스트</h2>");	
+				res.write("<div><ul>");
+				
+				for(var i=0;i<result.length;i++){
+					
+					var id = result[i]._doc.id;
+					var name = result[i]._doc.name;
+					var age = result[i]._doc.age;
+					var created = result[i]._doc.created;
+					
+					res.write("<li>#" + (i+1) + " : " 
+							+ id + ", " + name + ", " + age + "</li>");					
+					
+				}				
+				
+				res.write("</ul></div>");
+				res.write("<br/><br/><a href='/public/listUser.html'>리스트</a>");
+				res.end();
+				
+			}else{
+				res.writeHead("200",{"Content-type":"text/html;charset=utf-8"});
+				res.write("<h2>사용자 리스트 조회 실패</h2>");						
+				res.end();
+				
+			}
+			
+		});
+		
+	}
+	
+}
+
+module.exports.login = login;

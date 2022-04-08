@@ -3,7 +3,7 @@
 //crypto(암호화) 모듈
 var crypto = require("crypto");
 
-var Schema = {};//빈 객체//java에선 class
+var Schema = {};//빈 객체//java에선 class//객체 초기화
 
 //객체 안에 변수 만들어서 함수 넣기
 Schema.createSchema = function(mongoose) {//**here 매개변수
@@ -35,8 +35,8 @@ Schema.createSchema = function(mongoose) {//**here 매개변수
 	
 		UserSchema.method("makeSalt",function(){
 			
-			console.log("date : " + new Date().valueOf());//12321423423
-			console.log("math : " + Math.random());//0.12321423423
+			//console.log("date : " + new Date().valueOf());//12321423423
+			//console.log("math : " + Math.random());//0.12321423423
 			
 			return Math.round((new Date().valueOf() * Math.random())) + "";
 			

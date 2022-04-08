@@ -1,0 +1,7 @@
+module.exports = {
+		
+		serverPort:3000,
+		dbUrl:"mongodb://localhost:27017/shopping"//app2.js의 line23
+
+
+}

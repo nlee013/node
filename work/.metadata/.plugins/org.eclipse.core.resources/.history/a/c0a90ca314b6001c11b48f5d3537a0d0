@@ -1,0 +1,18 @@
+
+var mongoose = require("mongoose");
+
+//database 객체에 db, schema, model 추가
+var database = {};
+
+//app=express 객체
+//config = config.js 정보
+database.init = function(app, config) {
+	
+	connect(app, config);
+	
+}
+
+function connect(app, config){
+	
+	
+}

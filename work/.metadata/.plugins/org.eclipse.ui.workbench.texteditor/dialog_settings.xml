@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="&quot;dependencies&quot;: {" key="selection"/>
+		<item value="public" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="&quot;dependencies&quot;: {"/>
-			<item value="oracledb"/>
-			<item value="rea"/>
-			<item value="reas"/>
-			<item value="pwd"/>
-			<item value="password"/>
-			<item value="findByid"/>
-			<item value="static"/>
+			<item value="public"/>
+			<item value="ejs"/>
+			<item value="throw er"/>
+			<item value="er"/>
+			<item value="cnfig"/>
+			<item value="initRouters"/>
+			<item value="createUserSchema"/>
+			<item value="creay"/>
 		</list>
 		<list key="replacehistory">
 			<item value="pwd"/>

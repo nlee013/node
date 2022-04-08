@@ -1,0 +1,90 @@
+
+//Express 기본 모듈
+require("dotenv").config();
+var express = require("express");
+var http = require("http");
+var path = require("path");
+var serveStatic = require("serve-static");
+var expressErrorHandler = require("express-error-handler");
+var expressSession = require("express-session");
+
+//-database.js에 맨 위에 import 했기에 여기서 필요없다
+//var mongoose = require("mongoose");
+var user = require("./router/user"); 
+var config = require("./config");
+
+//추가
+var routerLoader = require("./router/routerLoader");
+
+//추가
+var database = require("./database/database");
+
+
+//익스프레스 객체 생성
+var app = express();
+
+app.set("port",process.env.PORT||config.serverPort);
+
+app.use(express.urlencoded({extended:false}));
+
+app.use("/public",serveStatic(path.join(__dirname,"public")));
+
+app.use(expressSession({
+	
+	secret:"my key",
+	resave:true,
+	saveUninitialized:true
+	
+}));
+
+
+//--------------------------------------------------------
+//라우터 객체 생성
+var router = express.Router();
+
+//로그인 라우터
+router.route("/process/login").post(user.login);
+
+//사용자 추가 라우터
+router.route("/process/addUser").post(user.addUser);
+
+//사용자 리스트 라우터
+router.route("/process/listUser").post(user.listUser);
+
+
+//라우터 객체 등록
+app.use("/",router);
+
+var errorHandler = expressErrorHandler({
+	
+	static: {
+		"404":"./public/404.html"
+	}
+	
+});
+
+app.use(expressErrorHandler.httpError(404));
+app.use(errorHandler);
+
+
+//Express 서버 시작
+http.createServer(app).listen(app.get("port"),function(){
+	
+	console.log("익스프레스 서버를 시작했습니다: " + app.get("port"));
+	
+	//DB연결 함수 호출
+	database.init(app, config);//app, confg-매개변수, init-변수
+	
+});
+
+
+
+
+
+
+
+
+
+
+
+

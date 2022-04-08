@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+<title>login test</title>
+</head>
+
+<link rel="stylesheet" type="text/css" href="./data/semantic.min.css">
+<link rel="stylesheet" type="text/css" href="./data/login.css">
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="./data/semantic.min.js"></script>
+
+<body>
+
+<div class="container">
+	<div id="cardbox" class="ui blue fluid card">
+		<div class="left floated author">
+			<img id="iconImage" class="ui avater image" src=",/image/suthor.png" >
+		</div>
+	
+		<div>
+			<div id="titleText" class="header">LOGIN</div>
+			<div id="contentsText" class="description">아이디와 비밀번호를 입력하고 로그인 하세요.</div>
+		</div>
+	</div>
+
+	<form action="/process/login" id="myForm" method="post">
+	
+		<table>
+			<tr class="row">
+				<td class="ol">
+					<label id="contentsText">ID :</label>
+				</td>
+				<td class="ol">
+					<label id="contentsText">PWD :</label>
+				</td>
+			</tr>
+		
+		
+		</table>
+	
+	
+	</form>
+
+
+</div>
+</body>
+</html>

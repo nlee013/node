@@ -1,0 +1,87 @@
+var login = function name(req, res) {
+	
+	console.log("/process/login 호출..");
+	
+	var id = req.body.id;
+	var pwd = req.body.pwd;
+	
+	if(database){
+		
+		authUser(database, id, pwd, function(err,result){
+			
+			if(err) {throw err;}
+			
+			if(result){
+				
+				var userName = result[0].name;
+				
+				res.writeHead("200",{"Content-type":"text/html;charset=utf-8"});
+				res.write("<h1>로그인 성공</h1>")
+				res.write("<div>아이디: " + id + "</div>");
+				res.write("<div>이름: " + userName + "</div>");
+				res.write("<br/><br/><a href='/public/login.html'>다시 로그인</a>");
+				res.end();				
+				
+			}else{
+				
+				res.writeHead("200",{"Content-type":"text/html;charset=utf-8"});
+				res.write("<h1>로그인 실패</h1>")				
+				res.write("<div>아이디 또는 패스워드를 확인하세요</div>");
+				res.write("<br/><br/><a href='/public/login.html'>다시 로그인</a>");
+				res.end();
+				
+			}
+			
+		});
+		
+	}else{
+		
+		res.writeHead("200",{"Content-type":"text/html;charset=utf-8"});
+		res.write("<h1>데이터베이스 연결 실패</h1>")				
+		res.write("<div>데이터베이스를 연결하지 못했습니다.</div>");		
+		res.end();	
+		
+	}
+};
+
+var addUsers = function(req, res){
+	
+console.log("/process/addUser 호출..");
+	
+	var id = req.body.id;
+	var pwd = req.body.pwd;
+	var name = req.body.name;
+	
+	if(database){
+		
+		addUser(database, id, pwd, name, function(err,result){
+			
+			if(err) {throw err;}
+			
+			if(result){
+				
+				res.writeHead("200",{"Content-type":"text/html;charset=utf-8"});
+				res.write("<h1>사용자 추가 성공</h1>")	
+				res.end();			
+				
+			}else{
+				
+				res.writeHead("200",{"Content-type":"text/html;charset=utf-8"});
+				res.write("<h1>사용자 추가 실패</h1>")	
+				res.end();	
+				
+			}
+		});
+		
+	}else{
+		
+		res.writeHead("200",{"Content-type":"text/html;charset=utf-8"});
+		res.write("<h1>데이터베이스 연결 실패</h1>")				
+		res.write("<div>데이터베이스를 연결하지 못했습니다.</div>");		
+		res.end();
+		
+	}
+	
+}
+
+module.exports.login = login;

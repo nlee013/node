@@ -1,0 +1,18 @@
+module.exports = {
+		
+		serverPort:3000,
+		dbUrl:"mongodb://localhost:27017/shopping",//app2.js의 line23
+		
+		//schemaName: ./database/userSchem.js 참조
+		//modelName: ./router/user.js 참조
+		
+		dbSchemas:[
+		          
+		           {file:"./userSchema", collection:"user3",
+		        	schemaName:"UserSchema", modelName:"UserModel"}
+		           
+		          ]
+
+
+
+}
