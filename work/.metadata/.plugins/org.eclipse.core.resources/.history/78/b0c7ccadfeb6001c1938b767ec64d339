@@ -1,0 +1,11 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width,height=device-height,initial-scale=1')
+    title 사용자 추가 성공!
+  body
+    h2  Jade
+    block content
+    include  ./footer.jade
+    

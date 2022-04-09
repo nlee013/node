@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+<title>User List</title>
+</head>
+<link rel="stylesheet" type="text/css" href="../public1/data/semantic.min.css">
+<link rel="stylesheet" type="text/css" href="../public1/data/listUserResp.css">
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="../public1/data/semantic.min.js"></script>
+
+
+<body>
+
+<div class="container">
+<br/>
+
+	<div class="ui raised segment">
+		<a href="ui blue ribbob label">사용자 리스트</a>
+		<br/><br/>
+		
+		<div class="ui two column grid">
+		
+			<% for(var i = 0; i < result.lengthl i++){ %>
+			<div class="column">
+				<div class="ui card">
+					<div class="image">
+						<img src="./image/suzi.png">
+					</div>
+			
+					<div class="content">
+						<a class="header"><%=result[i]._doc.name%></a>
+					</div>
+			
+					<div class="meta">
+						<span class="date"><%=result[i]._doc.created%></span>
+					</div>
+			
+					<div class="description">
+					<br/>
+						<p>신장:168cm</p>
+						<p>직업:가수</p>
+					</div>
+		
+					<div class="extra content"><%=100 + i%>Friends</div>
+				</div>
+			</div>
+			<%}%>
+			
+			<!-- *************************************************** -->
+			
+			<% for(var i = 0; i < result.lengthl i++){ %>
+			
+			<div class="column">
+				<div class="ui blue fluid card">
+  					<div class="content">
+    					<div class="header"><%=result[i]._doc.name%></div>
+    					<div class="meta">
+      						<span class="right floated time"><%=result[i]._doc.created%></span>
+      						<span class="category">MintCho World</span>
+    					</div>
+    					<div class="description">
+     						<br/>
+     						<p>신장 : 18cm</p>
+     						<p>직업 : 아이스크림 류</p>
+    					</div>
+  					</div>
+  					
+  					<div class="extra content">
+   						<div class="right floated author">
+      						<img class="ui avatar image" src="./image/mincho.png">
+    						02-123-1234
+    					</div>
+  					</div>
+				</div>	
+			</div>	
+			<%}%>
+									
+		</div>
+	</div>
+</div>
+</body>
+</html>

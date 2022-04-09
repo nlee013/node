@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="public" key="selection"/>
+		<item value="" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="router"/>
+			<item value="routerLoadr"/>
 			<item value="public"/>
 			<item value="ejs"/>
 			<item value="throw er"/>
 			<item value="er"/>
 			<item value="cnfig"/>
 			<item value="initRouters"/>
-			<item value="createUserSchema"/>
-			<item value="creay"/>
 		</list>
 		<list key="replacehistory">
 			<item value="pwd"/>

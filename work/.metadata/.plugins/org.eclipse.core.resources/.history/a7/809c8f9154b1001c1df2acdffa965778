@@ -1,8 +1,0 @@
-/*
-모듈 분리 방법 exports
-
-var calc = {}; calc class 빈 객체 만든 것
-cal.add = 10 전역 변수 생성
-
-cal.add  = function(a, b) 변수에 method 함수도 넣을 수 있음
-*/

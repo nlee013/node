@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<%-inclued("header") %>
+<body>
+
+<h2><%=title %></h2>
+
+<%-include("footer") %>
+
+</body>
+
+</html>

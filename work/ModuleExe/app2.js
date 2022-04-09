@@ -19,14 +19,16 @@ var routerLoader = require("./router/routerLoader");
 //추가
 var database = require("./database/database");
 
-
 //익스프레스 객체 생성
 var app = express();
 
 //뷰엔진 설정-----------------------------------------------------------추가(22/04/07)
 app.set("views", __dirname + "/views");
-app.set("view engine", "ejs");
-console.log("뷰엔진이 ejs로 설정 되었습니다.");
+/*app.set("view engine", "ejs");
+console.log("뷰엔진이 ejs로 설정 되었습니다.");*/
+
+app.set("view engine", "jade");//---추가(22/04/08)
+console.log("뷰엔진이 jade로 설정 되었습니다.");
 
 app.set("port",process.env.PORT||config.serverPort);
 
