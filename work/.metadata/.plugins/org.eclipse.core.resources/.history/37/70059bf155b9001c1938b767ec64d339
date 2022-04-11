@@ -1,0 +1,129 @@
+/*
+ * npm install socket.io --save
+- Web Socket : 웹 서버로 소켓을 연결한후 데이터를 주고받을 수 
+  있도록 만든 HTML5 표준으로 웹브라우져가 이 기능을 지원하지 않아도
+  Web Socket을 사용할 수 있게 만든것이 Socket.io 모듈
+  
+  npm install cors --save
+- cors모듈 : Ajax의 XMLHttpRequest 는 보안 문제를 이유로  
+  웹사이트를 제공하는 서버이외의 다른서버에는 접속할 수 없는데 
+  cors (Cross-Origin Resource Sharing)를 사용하면 제약이 풀림
+*/
+require("dotenv").config();
+var express = require("express");
+var http = require("http");
+var path = require("path");
+var serveStatic = require("serve-static");
+var expressErrorHandler = require("express-error-handler");
+var expressSession = require("express-session");
+
+var passport = require("passport");
+var flash = require("connect-flash");
+
+var config = require("./config");
+var database = require("./database/database");
+var routerLoader = require("./router/routerLoader");
+
+var cors = require("cors");//추가
+
+//익스프레스 객체 생성
+var app = express();
+
+//뷰엔진 설정
+app.set("views",__dirname + "/views");
+app.set("view engine","ejs");
+console.log("뷰엔진이 ejs로 설정 되었습니다");
+
+app.set("port",process.env.PORT||config.serverPort);
+
+app.use(express.urlencoded({extended:false}));
+
+app.use("/public",serveStatic(path.join(__dirname,"public")));
+
+app.use(cors());//추가
+
+app.use(expressSession({
+	
+	secret:"my key",
+	resave:true,
+	saveUninitialized:true
+	
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(flash());
+
+
+//라우터 객체 생성
+var router = express.Router();
+
+routerLoader.init(app,router);
+
+//패스포트 설정
+var configPassport = require("./passport/passport");
+configPassport(app,passport);
+
+//패스포트 라우팅 설정
+var userPassport = require("./router/userPassport");
+userPassport(router,passport);
+
+var errorHandler = expressErrorHandler({
+	
+	static: {
+		"404":"./public/404.html"
+	}
+	
+});
+
+app.use(expressErrorHandler.httpError(404));
+app.use(errorHandler);
+
+//Express 서버 시작
+//var host = "localhost";
+
+var server = http.createServer(app).listen(app.get("port"),//host,
+		function(){
+	
+	console.log("익스프레스 서버를 시작했습니다: " + app.get("port"));
+	
+	//DB연결 함수 호출
+	database.init(app,config);
+	
+});
+
+var io = require("socket.io")(server);
+
+io.sockets.on("connection", function(socket) {
+	
+	console.log("Connection Info: ", socket.request.connection._peername);
+	
+	//나중에 console.log로 확인 할 때 아래 참조
+	//ip: socket.request.connection._peername.address
+	//port: socket.request.connection._peername.port
+	
+	//emit에서 보낸걸 on으로 받는다
+	socket.on("message", function(message) {
+		
+		console.log("message event를 받았습니다.");
+		
+		if(message.receiver.val() == "ALL"){
+			
+			console.log("모든 client에게 message를 전송함..");
+			
+			io.sockets.emit("message", message);
+			
+		}
+		
+	})
+});
+
+
+
+
+
+
+
+
+
+

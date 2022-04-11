@@ -1,0 +1,4 @@
+module.export = function(app, passport) {
+	
+	console.log("passport.js 호출된다..");
+}

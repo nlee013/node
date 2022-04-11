@@ -1,0 +1,7 @@
+
+module.exports = function(router, passport){
+	
+	console.log("userPassport 호출된다..");
+	
+	
+}

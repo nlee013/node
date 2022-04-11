@@ -1,0 +1,3 @@
+//Passport Strategy 설정
+var LocalStrategy = require("passport-local").Strategy;
+
