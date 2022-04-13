@@ -1,0 +1,27 @@
+/*Feature
+	id: {type: "String"},
+	'type': {type: String, default: "Feature"},
+	geometry: Geometry,
+	properties: {type: "Object"}
+*/
+
+var Schema = {};
+
+Schema.createSchema = function(mongoose){
+	
+	var CoffeeShopSchema = mongoose.Schema({
+		
+		name : {type:String, index:"hashed"}//몽고디비는 name에다가 index를 만든다
+		addr:{type:String},
+		tel:{type:String},
+		geometry:{
+			
+			type:{type:String, "default" : "point"},
+			coordinates:[{type:"Number"}]
+			
+			
+		}
+	
+	
+	});
+}

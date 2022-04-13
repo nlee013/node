@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name='viewport' content='width=device-width,"height=device-height,initial-scale=1'>
+<title>가까운 스타벅스 찾기</title>
+</head>
+<body>
+
+<p>ITWILL 교육원</p>
+<br/>
+
+<form action="/process/nearCoffeeShop" method="post">
+
+	<table>
+		<tr>
+			<td>아래 [리스트] 버튼을 누르세요.</td>
+		</tr>
+	</table>
+
+	<input type="submit" value="리스트"/>
+</form>
+
+</body>
+</html>

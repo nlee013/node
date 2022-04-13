@@ -1,0 +1,151 @@
+//1. 스타벅스 정보를 저장하기 위한 함수
+var add = function(req, res) {
+	
+	console.log("add함수 호출");
+	
+	var name = req.body.name;
+	var addr = req.body.addr;
+	var tel = req.body.tel;
+	var longitude = req.body.longitude;
+	var latitude = req.body.latitude;
+	
+	var database = req.app.get("database");
+	
+	if(database){
+		
+		addCoffeeShop(database, name, addr, tel, longitude, latitude, function(err, result) {
+			
+			if(err){
+				
+				res.wrtieHead("200", {"Content-Type":"text/html;charset=utf-8"});
+				res.write("<meta name='viewport' content='width=device-width, height=device-height, initial-scale=1'>");
+				res.write("<h2>스타벅스 추가 중 오류 발생</h2>");
+				res.end();
+				
+				return;
+			}
+			
+			if(result){
+				
+				res.wrtieHead("200", {"Content-Type":"text/html;charset=utf-8"});
+				res.write("<meta name='viewport' content='width=device-width, height=device-height, initial-scale=1'>");
+				res.write("<h2>스타벅스 추가 성공</h2>");
+				res.end();
+				
+			}else{
+				
+				res.wrtieHead("200", {"Content-Type":"text/html;charset=utf-8"});
+				res.write("<meta name='viewport' content='width=device-width, height=device-height, initial-scale=1'>");
+				res.write("<h2>스타벅스 추가 실패</h2>");
+				res.end();
+				
+			}
+			
+		});
+	}else{
+		
+		res.wrtieHead("200", {"Content-Type":"text/html;charset=utf-8"});
+		res.write("<meta name='viewport' content='width=device-width, height=device-height, initial-scale=1'>");
+		res.write("<h2>Database 연결 실패</h2>");
+		res.end();
+	}
+};
+
+//2. 스타벅스 정보를 저장하기 위한 함수
+var list = function(req, res) {
+	
+	console.log("list 함수 호출된다..");
+	
+	//db연결
+	var databse = req.app.get("database");
+	
+	if(database){
+		
+		database.CoffeeShopModel.findAll(function(err, result){
+			
+			if(err){
+				
+				res.wrtieHead("200", {"Content-Type":"text/html;charset=utf-8"});
+				res.write("<meta name='viewport' content='width=device-width, height=device-height, initial-scale=1'>");
+				res.write("<h2>스타벅스 list 조회중 오류 발생</h2>");
+				res.end();
+			}
+			
+			if(result){
+				
+				res.wrtieHead("200", {"Content-Type":"text/html;charset=utf-8"});
+				res.write("<meta name='viewport' content='width=device-width, height=device-height, initial-scale=1'>");
+				res.write("<h2>스타벅스 리스트 성공</h2>");
+				res.write("<div><ul>");
+				
+				for(var i = 0; i < result.length; i++){
+					
+					var curName = result[i]._doc.name;
+					var curAddr = result[i]._doc.addr;
+					var curTel = result[i]._doc.tel;
+					var curLongitude = result[i]._doc.geometry.coordinates[0];//경도
+					var curLatitude = result[i]._doc.geometry.coordinates[1];//위도
+					
+					res.write("<li>#" + (i + 1) + ":" +
+							curName + "," +
+							curAddr + "," +
+							curTel + "," +
+							curLongitude + ", " +
+							curLongitude + "</li>");
+					
+				}
+				res.write("</div></ul>");
+				res.end();
+				
+			}else{
+				
+				res.wrtieHead("200", {"Content-Type":"text/html;charset=utf-8"});
+				res.write("<meta name='viewport' content='width=device-width, height=device-height, initial-scale=1'>");
+				res.write("<h2>스타벅스 list 추가 실패</h2>");
+				res.end();
+				
+			}
+			
+		});
+		
+	}else{
+		
+		res.wrtieHead("200", {"Content-Type":"text/html;charset=utf-8"});
+		res.write("<meta name='viewport' content='width=device-width, height=device-height, initial-scale=1'>");
+		res.write("<h2>스타벅스  list 추가 성공</h2>");
+		res.end();
+		
+	}
+};
+
+//추가 함수(내가 실제로 추가하는 함수)
+var addCoffeeShop = function(database, name, addr, tel, longitude, latitude, callback) {
+	
+	console.log("addCoffeeShop 호출된다..");
+	
+	//CoffeeShopModel 객체 생성
+	var coffeeshop = new database.CoffeeShopModel({
+			
+			name:name, addr:addr, tel:tel,
+			geometry : {typr:"Point", coordinates:[longitude, latitude]}
+	});
+	
+	//save()로 저장
+	coffeeShop.save(function(err) {
+		
+		if(err){
+			
+			callback(err, null);
+			return;
+		}
+		
+		console.log("스타벅스 data 추가된다..");
+		
+		callback(null, coffeeShop);
+		
+	});
+	
+}
+
+module.exports.add = add;
+module.exports.list = list;
